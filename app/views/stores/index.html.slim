@@ -21,7 +21,7 @@ div.row
     - @stores.each do |store|
       - job = store.jobs.first if store.jobs.any?
       - color = job ? type_color(job.job_type.name) : "secondary"
-      div style="transform: rotate(0);" class="cart text border border-#{ color } rounded-lg"
+      div style="transform: rotate(0);" class="cart text bg-#{ color } rounded-lg"
         div.card-header.d-flex
           span = link_to store.name, store_path(store), class: "black without-line stretched-link"
           span style="margin-left:auto" = store.s_stat
