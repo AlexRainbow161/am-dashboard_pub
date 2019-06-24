@@ -20,12 +20,12 @@ div.row
   div.col
     - @stores.each do |store|
       - job = store.jobs.first if store.jobs.any?
-      - color = job ? type_color(job.job_type.name) : "secondary"
+      - color = job ? type_color(job.job_type.name) : ""
       div style="transform: rotate(0);" class="cart text border border-#{ color } rounded-lg"
         div.card-header.d-flex
           span = link_to store.name, store_path(store), class: "black without-line stretched-link"
           span style="margin-left:auto" = store.s_stat
-        div class="card-body bg-#{ color }"
+        div class="card-body bg-#{ color.empty? ? " text-dark" : color + " text-white" }"
           p.card-text = job ? (job.job_type.name + " " + job.status.name + " " + (job.end_date ? human_date(job.end_date) : human_date(job.start_date).to_s)).capitalize + " инженером #{job.user.fullname}" : "Нет известных работ"
       br
     = will_paginate @stores, renderer: WillPaginate::ActionView::BootstrapLinkRenderer

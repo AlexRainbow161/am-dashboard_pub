@@ -28,7 +28,7 @@ module JobsHelper
     when "Закрытие"
       color = "danger"
     when "Профилактика"
-      color = "warning"
+      color = "primary"
     end
   end
 end
