@@ -1,0 +1,35 @@
+div.card
+  div.card-header
+    = @store.name
+  div.card-body
+    table.table.table-borderless
+      thead
+        tr
+          th scope="col" Регион
+          th scope="col" Время открытия
+          th scope="col" Время закрытия
+          th scope="col" Часовой пояс
+          th scope="col" Электронная почта
+          th scope="col" Адрес
+      tbody
+        tr
+          td = @store.region
+          td = @store.time_start
+          td = @store.time_end
+          td = @store.zone
+          td = @store.email
+          td = @store.addr
+    = link_to "Добавить выезд", new_store_job_path(@store), role: "button", class: "btn btn-outline-primary"
+    hr.my-4
+    table.table.table-hover
+      thead.thead-dark
+        tr
+          th Дата
+          th Инженер
+          th Статус
+      tbody
+        - @store.jobs.each do |job|
+          tr onclick='goto("#{store_job_path(@store, job)}")'
+            td = human_date(job.start_date)
+            td = first_name(job.user.fullname)
+            td = job.status.name

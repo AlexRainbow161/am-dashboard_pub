@@ -1,0 +1,9 @@
+{
+  "name": "am-dashboard",
+  "private": true,
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "bootstrap": "^4.3.1",
+    "cropper": "~4.0.0"
+  }
+}

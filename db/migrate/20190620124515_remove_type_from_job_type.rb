@@ -1,0 +1,5 @@
+class RemoveTypeFromJobType < ActiveRecord::Migration[5.2]
+  def change
+    remove_column :job_types, :type
+  end
+end

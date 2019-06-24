@@ -1,0 +1,20 @@
+div.card
+  div.card-header.d-inline-flex
+    = @user.fullname
+    span style="margin-left:auto" = @user.user_role.role if @user.user_role
+  div.card-body
+    div.settings
+
+    hr.my-4
+    table.table.table-hover
+      thead.thead-dark
+        tr
+          th scope="col" Дата
+          th scope="col" Магазин
+          th scope="col" Статус
+      tbody
+      - @user.jobs.each do |job|
+        tr onclick='goto("#{user_job_path(job.user, job)}")'
+          td = human_date(job.start_date)
+          td = job.store.name
+          td = job.status.name
