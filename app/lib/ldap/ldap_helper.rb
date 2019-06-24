@@ -16,8 +16,7 @@ module Ldap
           user = {username: username,
                   fullname: entry['displayName'].first,
                   email: entry['mail'].first,
-                  role_id: 2
-          }
+                  role_id: 2}
         else
           false
         end

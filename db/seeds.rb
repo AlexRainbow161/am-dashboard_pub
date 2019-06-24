@@ -13,3 +13,7 @@ end
 unless JobType.all.any?
   job_type = JobType.create!([{name: "Открытие"}, {name: "Профилактика"}, {name: "Закрытие"}])
 end
+
+unless UserRole.all.any?
+  user_role = UserRole.create!([{role: "Admin"}, {role: "User"}])
+end
