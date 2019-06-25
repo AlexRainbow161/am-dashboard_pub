@@ -12,11 +12,19 @@ module JobsHelper
     name = fullname.split().first
   end
 
-  def select_options
+  def select_options_job_type
     job_types = JobType.all
     select = []
     job_types.each do |job_type|
       select << [job_type.name, job_type.id]
+    end
+    select
+  end
+
+  def select_options_job_status
+    select = []
+    Status.all.each do |status|
+      select << [status.name, status.id]
     end
     select
   end
