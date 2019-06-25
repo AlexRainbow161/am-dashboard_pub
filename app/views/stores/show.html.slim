@@ -38,7 +38,7 @@ div.row
       div class="card card-index rounded-lg border border-#{ color }"
         div.card-header.d-flex
           span
-            = link_to job.job_type.name, store_job_path(@store.code, job), class: "without-line stretched-link text-#{ color }"
+            = link_to "#{job.job_type.name} от #{ human_date(job.end_date ? job.end_date : job.start_date) }", store_job_path(@store.code, job), class: "without-line stretched-link text-#{ color }"
           span style="margin-left:auto"
             = job.status.name
         div.card-body
