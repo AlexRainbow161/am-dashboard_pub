@@ -28,9 +28,11 @@ div.card
           th Дата
           th Инженер
           th Статус
+          th Тип
       tbody
         - @store.jobs.each do |job|
           tr onclick='goto("#{store_job_path(@store, job)}")'
             td = human_date(job.start_date)
             td = first_name(job.user.fullname)
             td = job.status.name
+            td = job.job_type.name
