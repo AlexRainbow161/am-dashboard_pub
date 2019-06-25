@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b68124d4-853c-42c4-839a-edf54faea5fb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/views/user/show.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/user/show.html.slim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/stores/index.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/stores/index.html.slim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/stores/show.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/stores/show.html.slim" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -20,11 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/stores/index.html.slim">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="16" column="62" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="62" />
+            <state relative-caret-position="26">
+              <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -32,8 +33,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/stores/show.html.slim">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="37" column="34" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
+            <state relative-caret-position="962">
+              <caret line="37" column="32" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -92,7 +93,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/user/show.html.slim">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="397">
@@ -120,6 +121,7 @@
       <find>&quot;&quot;</find>
       <find>&quot;</find>
       <find>end_date</find>
+      <find>br</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -167,13 +169,13 @@
         <option value="$PROJECT_DIR$/app/assets/stylesheets/sessions.scss" />
         <option value="$PROJECT_DIR$/app/helpers/jobs_helper.rb" />
         <option value="$PROJECT_DIR$/app/views/jobs/_form.html.slim" />
-        <option value="$PROJECT_DIR$/app/views/stores/show.html.slim" />
         <option value="$PROJECT_DIR$/app/models/store.rb" />
-        <option value="$PROJECT_DIR$/app/views/stores/index.html.slim" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/stores.scss" />
         <option value="$PROJECT_DIR$/app/models/job.rb" />
         <option value="$PROJECT_DIR$/app/helpers/stores_helper.rb" />
         <option value="$PROJECT_DIR$/app/views/user/show.html.slim" />
+        <option value="$PROJECT_DIR$/app/views/stores/show.html.slim" />
+        <option value="$PROJECT_DIR$/app/views/stores/index.html.slim" />
       </list>
     </option>
   </component>
@@ -184,9 +186,9 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2277" />
-    <option name="y" value="91" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1961" />
+    <option name="y" value="77" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -428,15 +430,15 @@
       <workItem from="1561016864649" duration="1039000" />
       <workItem from="1561017939651" duration="106000" />
       <workItem from="1561018175170" duration="17829000" />
-      <workItem from="1561116684576" duration="33237000" />
+      <workItem from="1561116684576" duration="37614000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="148834000" />
+    <option name="totallyTimeSpent" value="153211000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="1961" y="77" width="1936" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19829424" />
@@ -761,13 +763,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/stores/show.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="37" column="34" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/stores.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="397">
@@ -779,13 +774,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
           <caret line="4" column="18" lean-forward="true" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/stores/index.html.slim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="16" column="62" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="62" />
         </state>
       </provider>
     </entry>
@@ -807,6 +795,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="397">
           <caret line="21" column="32" lean-forward="true" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/stores/show.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="962">
+          <caret line="37" column="32" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/stores/index.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
         </state>
       </provider>
     </entry>

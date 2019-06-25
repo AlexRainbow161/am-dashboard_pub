@@ -1,38 +1,46 @@
-div.card
-  div.card-header
-    = @store.name
-  div.card-body
-    table.table.table-borderless
-      thead
-        tr
-          th scope="col" Регион
-          th scope="col" Время открытия
-          th scope="col" Время закрытия
-          th scope="col" Часовой пояс
-          th scope="col" Электронная почта
-          th scope="col" Адрес
-      tbody
-        tr
-          td = @store.region
-          td = @store.time_start
-          td = @store.time_end
-          td = @store.zone
-          td = @store.email
-          td = @store.addr
-    = link_to "Добавить выезд", new_store_job_path(@store), role: "button", class: "btn btn-outline-primary"
-    = link_to "Добавить исторический выезд", new_store_job_path(@store, historical: :true), role: "button", class:"btn btn-outline-primary", style: "margin-left: 8px"
-    hr.my-4
-    table.table.table-hover
-      thead.thead-dark
-        tr
-          th Дата
-          th Инженер
-          th Статус
-          th Тип
-      tbody
-        - @store.jobs.each do |job|
-          tr onclick='goto("#{store_job_path(@store, job)}")'
-            td = human_date(job.start_date)
-            td = first_name(job.user.fullname)
-            td = job.status.name
-            td = job.job_type.name
+div.row
+  div.col-3
+    div.sticky-top style="top:5em"
+      div.card
+        div.card-header.d-flex
+          span = @store.name
+          span style="margin-left:auto" = @store.s_stat
+        div.card-body
+          P.card-text
+            span.font-weight-bold
+              ' Регион:
+            = @store.region
+          p.card-text
+            span.font-weight-bold
+              ' Email:
+            = @store.email
+          p.card-text
+            span.font-weight-bold
+              ' Адрес:
+            = @store.addr
+            p.card-text
+              span.font-weight-bold
+                ' Время открытия:
+              = @store.time_start
+            p.card-text
+              span.font-weight-bold
+                ' Время закрытия:
+              = @store.time_end
+            p.card-text
+              span.font-weight-bold
+                ' Часовой пояс:
+              = @store.zone
+          = link_to "Добавить выезд", new_store_job_path(@store), class: "card-link"
+          = link_to "Добавить исторический выезд", new_store_job_path(@store, historical: :true), class:"card-link"
+  div.col
+    - @store.jobs.each do |job|
+      - color = type_color(job.job_type.name)
+      div class="card card-index rounded-lg border border-#{ color }"
+        div.card-header.d-flex
+          span
+            = link_to job.job_type.name, store_job_path(@store.code, job), class: "without-line stretched-link text-#{ color }"
+          span style="margin-left:auto"
+            = job.status.name
+        div.card-body
+          p.card-text  = job.user.fullname
+      br
