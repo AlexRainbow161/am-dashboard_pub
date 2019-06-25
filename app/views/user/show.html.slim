@@ -12,9 +12,11 @@ div.card
           th scope="col" Дата
           th scope="col" Магазин
           th scope="col" Статус
+          th scope="col" Тип
       tbody
       - @user.jobs.each do |job|
         tr onclick='goto("#{user_job_path(job.user, job)}")'
           td = human_date(job.start_date)
           td = job.store.name
           td = job.status.name
+          td = job.job_type.name
