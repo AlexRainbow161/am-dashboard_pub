@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b68124d4-853c-42c4-839a-edf54faea5fb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/views/jobs/edit.html.slim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/jobs_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/jobs_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/jobs/show.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/jobs/show.html.slim" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
@@ -29,22 +32,27 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/jobs/show.html.slim">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="8" column="140" lean-forward="true" selection-start-line="8" selection-start-column="140" selection-end-line="8" selection-end-column="140" />
+            <state relative-caret-position="234">
+              <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/store.rb">
+        <entry file="file://$PROJECT_DIR$/app/views/jobs/edit.html.slim">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+            <state relative-caret-position="26">
+              <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/jobs/index.html.slim">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -56,25 +64,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/jobs_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="27" column="18" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
+            <state relative-caret-position="156">
+              <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/jobs/new.html.slim">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/helpers/jobs_helper.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="676">
-              <caret line="26" column="40" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
+            <state relative-caret-position="26">
+              <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -169,8 +172,9 @@
         <option value="$PROJECT_DIR$/app/views/stores/index.html.slim" />
         <option value="$PROJECT_DIR$/app/views/stores/show.html.slim" />
         <option value="$PROJECT_DIR$/app/views/jobs/_form.html.slim" />
-        <option value="$PROJECT_DIR$/app/controllers/jobs_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/jobs/show.html.slim" />
+        <option value="$PROJECT_DIR$/app/views/jobs/edit.html.slim" />
+        <option value="$PROJECT_DIR$/app/controllers/jobs_controller.rb" />
       </list>
     </option>
   </component>
@@ -426,18 +430,18 @@
       <workItem from="1561017939651" duration="106000" />
       <workItem from="1561018175170" duration="17829000" />
       <workItem from="1561116684576" duration="39222000" />
-      <workItem from="1561458838191" duration="1594000" />
+      <workItem from="1561458838191" duration="3028000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="156413000" />
+    <option name="totallyTimeSpent" value="157847000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20042644" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20042644" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -450,7 +454,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.4262473" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.4262473" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32882413" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -485,10 +489,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/helpers/user_helper.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20190610084254_create_statuses.rb" />
     <entry file="file://$PROJECT_DIR$/db/migrate/20190611131540_add_role_id_to_user.rb" />
     <entry file="file://$PROJECT_DIR$/db/migrate/20190620091654_add_type_and_store_code_to_jobs.rb" />
     <entry file="file://$PROJECT_DIR$/app/models/user_role.rb">
@@ -749,8 +749,12 @@
     <entry file="file://$PROJECT_DIR$/app/models/status.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/jobs/new.html.slim">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/app/views/jobs/show.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/jobs/_form.html.slim">
       <provider selected="true" editor-type-id="text-editor">
@@ -759,10 +763,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/jobs_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/jobs/index.html.slim">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/jobs/new.html.slim">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="27" column="18" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
+        <state relative-caret-position="26">
+          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/jobs/edit.html.slim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
         </state>
       </provider>
     </entry>
@@ -773,10 +787,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/jobs/show.html.slim">
+    <entry file="file://$PROJECT_DIR$/app/controllers/jobs_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="8" column="140" lean-forward="true" selection-start-line="8" selection-start-column="140" selection-end-line="8" selection-end-column="140" />
+        <state relative-caret-position="156">
+          <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
         </state>
       </provider>
     </entry>

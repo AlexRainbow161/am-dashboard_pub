@@ -1,6 +1,6 @@
 class JobsController < ApplicationController
   before_action :job_params, only: [:create]
-  before_action :set_job, only: [:show, :destroy]
+  before_action :set_job, only: [:show, :destroy, :edit, :update]
   def index
     @jobs = Job.all.paginate(page: params[:page], per_page: 30).order(created_at: :desc)
   end
@@ -19,7 +19,16 @@ class JobsController < ApplicationController
     # redirect_to new_store_job_path(Store.find(1095))
   end
 
-  def show
+  def show; end
+
+  def edit; end
+
+  def update
+    if @job.update(job_params)
+      redirect_to job_path(@job), success: "Работа обновлена"
+    else
+      redirect_to job_path(@job), danger: "Ошибка сохранения"
+    end
   end
 
   def destroy
@@ -37,5 +46,6 @@ class JobsController < ApplicationController
 
   def set_job
     @job = Job.find(params[:id])
+    @store = @job.store
   end
 end
