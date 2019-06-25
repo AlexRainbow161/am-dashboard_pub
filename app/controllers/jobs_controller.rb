@@ -1,6 +1,6 @@
 class JobsController < ApplicationController
   before_action :job_params, only: [:create]
-  before_action :set_job, only: [:show]
+  before_action :set_job, only: [:show, :destroy]
   def index
     @jobs = Job.all.paginate(page: params[:page], per_page: 30).order(created_at: :desc)
   end
@@ -20,6 +20,13 @@ class JobsController < ApplicationController
   end
 
   def show
+  end
+
+  def destroy
+    store_code = @job.store.code
+    if @job.destroy
+      redirect_to store_path(store_code), success: "Работа успешно удалена"
+    end
   end
 
   private
