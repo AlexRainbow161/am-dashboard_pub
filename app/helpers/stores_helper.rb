@@ -24,7 +24,7 @@ module StoresHelper
 
   def job_select
     select = []
-    Job.select(:user_id, :status_id).distinct.each do |job|
+    Job.select(:user_id).distinct.each do |job|
       select << [job.user.fullname, job.user.username]
     end
     select << ["Инженер", ""]

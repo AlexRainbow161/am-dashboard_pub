@@ -26,3 +26,12 @@
 .stretched-link:hover{
   color: black;
 }
+
+.card-header span a{
+  font-weight: bold;
+}
+
+.card-index:hover{
+  transition: 500ms;
+  box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+}
