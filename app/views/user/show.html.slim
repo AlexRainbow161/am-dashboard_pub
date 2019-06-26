@@ -1,22 +1,29 @@
-div.card
-  div.card-header.d-inline-flex
-    = @user.fullname
-    span style="margin-left:auto" = @user.user_role.role if @user.user_role
-  div.card-body
-    div.settings
-
-    hr.my-4
-    table.table.table-hover
-      thead.thead-dark
-        tr
-          th scope="col" Дата
-          th scope="col" Магазин
-          th scope="col" Статус
-          th scope="col" Тип
-      tbody
-      - @user.jobs.each do |job|
-        tr onclick='goto("#{user_job_path(job.user, job)}")'
-          td = human_date(job.start_date)
-          td = job.store.name
-          td = job.status.name
-          td = job.job_type.name
+div.row
+  div.col-3
+    div.card.rounded-lg
+      div.card-header.d-flex
+        span.font-weight-bold
+          - name = @user.fullname.split
+          ' #{name.first} #{name.second}
+        span.left-flex
+          = @user.user_role.role
+      div.card-body
+        p.card-text
+          span.font-weight-bold
+            ' Email:
+          span = @user.email
+        p.card-text
+          span.font-weight-bold
+            ' Кол-во работ:
+          span = @user.jobs.count
+  div.col
+    - @user.jobs.each do |job|
+      - color = type_color(job.job_type.name)
+      div class="card card-index rounded-lg border border-#{ color }"
+        div.card-header
+          span class="font-weight-bold"
+            = link_to "#{job.job_type.name} от #{human_date(job.end_date ? job.end_date : job.start_date)} в #{job.store.name}", job_path(job), class:"stretched-link text-#{ color } without-line"
+        div.card-body
+          p.card-text
+            = job.status.name
+      br
