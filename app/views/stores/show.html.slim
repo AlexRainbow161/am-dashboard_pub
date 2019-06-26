@@ -1,9 +1,9 @@
 div.row
-  div.col-3
+  div.col-sm-3
     div.sticky-top style="top:5em"
       div.card
         div.card-header.d-flex
-          span = @store.name
+          span.font-weight-bold = @store.name
           span style="margin-left:auto" = @store.s_stat
         div.card-body
           P.card-text
@@ -32,7 +32,7 @@ div.row
               = @store.zone
           = link_to "Добавить выезд", new_store_job_path(@store), class: "card-link"
           = link_to "Добавить исторический выезд", new_store_job_path(@store, historical: :true), class:"card-link"
-  div.col
+  div.col-md
     - @store.jobs.each do |job|
       - color = type_color(job.job_type.name)
       div class="card card-index rounded-lg border border-#{ color }"

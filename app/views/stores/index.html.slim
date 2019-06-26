@@ -1,10 +1,10 @@
 div.row
-  div.col-3
-  div.col
+  div.col-sm-3
+  div.col-md
 
 div.row
-  div.col-3
-    div.card.sticky-top style="top:5em; padding: 0 0 20px 0"
+  div.col-sm-3
+    div.card.sticky-top.rounded-lg style="top:5em; padding: 0 0 20px 0"
       div.card-header Поиск
       dib.card-body
         = form_with(url: root_path, method: :GET, local: true) do |f|
@@ -18,7 +18,7 @@ div.row
             = f.select :user_name, options_for_select(job_select, "#{params[:user_name] ? params[:user_name] : ''}"), {}, {class: "form-control"}
             br
             = f.submit value: "Показать", class: "btn btn-outline-primary", style: "width:100%;margin:auto" , data: {disable_with: "Поиск"}
-  div.col
+  div.col-md
     - @stores.each do |store|
       - job = store.jobs.first if store.jobs.any?
       - color = job ? type_color(job.job_type.name) : ""
