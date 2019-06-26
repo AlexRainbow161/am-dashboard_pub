@@ -21,6 +21,20 @@ module Ldap
           false
         end
       end
+      def search_by_username(username)
+        ldap ||= Net::LDAP.new
+        ldap.host = "10.61.0.10"
+        ldap.port = 389
+        ldap.auth "gj\\bogovid", "Anarhi916@"
+        if ldap.bind
+          filter = Net::LDAP::Filter.eq('sAMAccountName', "*#{username}*")
+          tree = "dc=gloria,dc=aaanet,dc=ru"
+          attrs  = ['mail', 'displayName', 'sAMAccountName']
+          entrys = ldap.search(base: tree, filter: filter, attributes: attrs)
+        else
+          nil
+        end
+      end
     end
   end
 end

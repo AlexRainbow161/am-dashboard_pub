@@ -7,4 +7,15 @@ class User < ApplicationRecord
   def firstname
     fullname.split.first
   end
+
+  def admin?
+    case self.user_role.role
+    when 'Admin'
+      true
+    when 'User'
+      false
+    else
+      false
+    end
+  end
 end

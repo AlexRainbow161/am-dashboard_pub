@@ -1,0 +1,18 @@
+= form_with(url: search_admin_index_path, method: :get, local: true) do |f|
+  div.input-group
+    = f.text_field :username, class: "form-control", value: params[:username], placeholder: "Имя пользователя"
+    div.input-group-append
+      = f.submit value: "Найти", class: "btn btn-outline-primary"
+  br
+  - if @users
+    div.card-columns
+      - @users.each do |user|
+        div.card
+          div.card-header
+            span.font-weight-bold
+              =' user['displayName'].first
+          div.card-body
+            - unless user_exist? user['sAMAccountName'].first
+              = link_to "Добавить", user_index_path(user: {username: user['sAMAccountName'].first.downcase, fullname: user["displayName"].first, email: user['mail'].first, role_id: 2}), method: :post, class: "card-link"
+            - else
+              p.card-text Пользователь уже добавлен
