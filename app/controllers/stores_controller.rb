@@ -8,6 +8,8 @@ class StoresController < ApplicationController
     @stores = @stores.by_status(params[:s_stat]) if params[:s_stat] && !params[:s_stat].empty?
     @stores = @stores.by_job_date(params[:date_start], params[:date_end]) if params[:date_start] || params[:date_end]
     @stores = @stores.by_user_name(params[:user_name]) if params[:user_name] && !params[:user_name].empty?
+    @stores = @stores.by_job_stat(params[:job_status_id]) if params[:job_status_id] && params[:job_status_id] != "0"
+    @stores = @stores.by_job_type(params[:job_type_id]) if params[:job_type_id] && params[:job_type_id] != "0"
   end
   def show; end
 
@@ -17,6 +19,6 @@ class StoresController < ApplicationController
     @store = Store.find(params[:code])
   end
   def query_params
-    params.permit(:region, :name, :s_stat, :user_name, :date_start, :date_end, :code)
+    params.permit(:region, :name, :s_stat, :user_name, :date_start, :date_end, :code, :job_status_id, :job_type_id)
   end
 end

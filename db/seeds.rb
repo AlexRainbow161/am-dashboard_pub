@@ -17,3 +17,9 @@ end
 unless UserRole.all.any?
   user_role = UserRole.create!([{role: "Admin"}, {role: "User"}])
 end
+
+Job.all.each do |job|
+  if job.accepted.nil?
+    job.update!(accepted: true)
+  end
+end

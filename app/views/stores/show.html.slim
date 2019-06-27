@@ -1,11 +1,19 @@
 div.row
-  div.col-sm-3
+  div.col-sm-4
     div.sticky-top style="top:5em"
       div.card
         div.card-header.d-flex
           span.font-weight-bold = @store.name
-          span style="margin-left:auto" = @store.s_stat
+          span.ml-auto = @store.s_stat
         div.card-body
+          P.card-text
+            span.font-weight-bold
+              ' Код магазина:
+            = @store.code
+          P.card-text
+            span.font-weight-bold
+              ' IDD Базы:
+            = @store.baseidd
           P.card-text
             span.font-weight-bold
               ' Регион:
@@ -39,7 +47,7 @@ div.row
         div.card-header.d-flex
           span
             = link_to "#{job.job_type.name} от #{ human_date(job.end_date ? job.end_date : job.start_date) }", store_job_path(@store.code, job), class: "without-line stretched-link text-#{ color }"
-          span style="margin-left:auto"
+          span.ml-auto
             = job.status.name
         div.card-body
           p.card-text  = job.user.fullname

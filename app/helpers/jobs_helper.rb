@@ -18,7 +18,7 @@ module JobsHelper
     job_types.each do |job_type|
       select << [job_type.name, job_type.id]
     end
-    select
+    select << ["Тип работы", 0]
   end
 
   def select_options_job_status
@@ -26,7 +26,7 @@ module JobsHelper
     Status.all.each do |status|
       select << [status.name, status.id]
     end
-    select
+    select << ["Статус работы", 0]
   end
 
   def type_color(job_type)

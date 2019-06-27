@@ -10,7 +10,7 @@
         div.card
           div.card-header
             span.font-weight-bold
-              =' user['displayName'].first
+              = user['displayName'].first
           div.card-body
             - unless user_exist? user['sAMAccountName'].first
               = link_to "Добавить", user_index_path(user: {username: user['sAMAccountName'].first.downcase, fullname: user["displayName"].first, email: user['mail'].first, role_id: 2}), method: :post, class: "card-link"

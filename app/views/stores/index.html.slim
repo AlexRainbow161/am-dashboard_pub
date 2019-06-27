@@ -1,11 +1,13 @@
 div.row
-  div.col-sm-3
+  div.col-sm-4
   div.col-md
 
 div.row
-  div.col-sm-3
+  div.col-sm-4
     div.card.sticky-top.rounded-lg style="top:5em; padding: 0 0 20px 0"
-      div.card-header Поиск
+      div.card-header.d-flex
+        span Поиск
+        = link_to "Сбросить фильтры", root_path, class: "ml-auto card-link"
       dib.card-body
         = form_with(url: root_path, method: :GET, local: true) do |f|
           div.form-group.card-text
@@ -17,15 +19,25 @@ div.row
             br
             = f.select :user_name, options_for_select(job_select, "#{params[:user_name] ? params[:user_name] : ''}"), {}, {class: "form-control"}
             br
+            div.input-group
+              = f.select :job_status_id, options_for_select(select_options_job_status, (params[:job_status_id] ? params[:job_status_id] : 0)), {}, {class: "form-control"}
+              = f.select :job_type_id, options_for_select(select_options_job_type, (params[:job_type_id] ? params[:job_type_id] : 0)), {}, {class: "form-control"}
+            br
             = f.submit value: "Показать", class: "btn btn-outline-primary", style: "width:100%;margin:auto" , data: {disable_with: "Поиск"}
   div.col-md
     - @stores.each do |store|
       - job = store.jobs.first if store.jobs.any?
       - color = job ? type_color(job.job_type.name) : ""
       div style="transform: rotate(0);" class="card card-index border border-#{ color } rounded-lg"
-        div.card-header.d-flex
-          span = link_to "#{store.name} (#{store.region})", store_path(store), class: "black without-line stretched-link text-#{color}"
-          span style="margin-left:auto" = store.s_stat
+        div.card-header
+          div.d-flex
+            span = link_to "#{store.name} (#{store.region})", store_path(store), class: "black without-line stretched-link text-#{color}"
+            span.ml-auto = store.s_stat
+          div.d-flex
+            span.text-muted
+              small = "CODE: #{store.code}"
+            span.text-muted.ml-auto
+              small = "IDD: #{store.baseidd}"
         div class="card-body"
           p class="card-text" = job ? (job.job_type.name + " " + job.status.name + " " + (job.end_date ? human_date(job.end_date) : human_date(job.start_date).to_s)).capitalize + " инженером #{job.user.fullname}" : "Нет известных работ"
       br
