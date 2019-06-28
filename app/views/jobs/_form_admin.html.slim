@@ -1,0 +1,21 @@
+= form_for(@job) do |f|
+  div.form-group
+    = f.label :Магазин
+    input type="text" class="form-control" value="#{@store.name}" readonly="true"
+    = f.hidden_field :store_code, value: @store.code
+  div.form-group
+    = f.label :Дата_начала, for:"start_date", class:"d-block"
+    = f.date_field :start_date, class: "form-control", id:"start_date"
+  div.form-group
+    = f.label :Дата_окончания, for: "end_date", class: "d-block"
+    = f.date_field :end_date, class: "form-control", id: "end_date"
+  div.form-group
+    = f.label :Исполнитель
+    = f.select :user_id, options_for_select(user_select, current_user.id), {}, {class: "form-control"}
+  div.form-group
+    = f.label :Тип
+    = f.select :job_type_id, options_for_select(select_options_job_type), {}, {class: "form-control"}
+  div.form-group
+    = f.label :Статус
+    = f.select :status_id, options_for_select(select_options_job_status), {}, {class: "form-control"}
+  = f.submit value: "Сохранить", class: "btn btn-outline-primary"

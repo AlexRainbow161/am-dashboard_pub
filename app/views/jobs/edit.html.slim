@@ -1,2 +1,5 @@
 div.form-wrapper style="max-width: 50%"
-  == render 'form'
+  - if current_user.admin?
+    == render 'jobs/form_admin'
+  - else
+    == render 'form'
