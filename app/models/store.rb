@@ -1,6 +1,6 @@
 class Store < ApplicationRecord
   self.primary_key = :code
-  default_scope { includes(:jobs).where("name NOT LIKE '%Ecomm%' AND name NOT LIKE '%TMALL%'") }
+  default_scope { includes(:jobs).where("name NOT LIKE '%Ecomm%' AND name NOT LIKE '%TMALL%' AND baseidd IS NOT null") }
   scope :by_name, ->(name) { where("name LIKE (?)", "%#{name}%") }
   scope :by_region, ->(region) { where region: region }
   scope :by_status, ->(s_stat) { where s_stat: s_stat }

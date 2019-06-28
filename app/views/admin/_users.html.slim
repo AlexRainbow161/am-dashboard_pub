@@ -9,4 +9,4 @@ div.card-columns
           - unless user.admin?
             = link_to "Сделать админом", user_path(user, user: {role_id: 1}), method: :put, class: "card-link", style: "margin-left:auto"
           - else
-            = link_to "Расжаловать", user_path(user, user: {role_id: 2}), method: :put, class: "card-link", style: "margin-left:auto" if current_user.id != user.id
+            = link_to "Разжаловать", user_path(user, user: {role_id: 2}), method: :put, class: "card-link", style: "margin-left:auto" if current_user.id != user.id
