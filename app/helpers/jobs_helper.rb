@@ -3,11 +3,6 @@ module JobsHelper
     last_job = store.jobs.order(created_at: :desc).first
   end
 
-  def human_date(date)
-    d = Date.strptime(date.to_s, '%Y-%m-%d')
-    time = d.strftime('%d.%m.%Y')
-  end
-
   def first_name(fullname)
     name = fullname.split().first
   end

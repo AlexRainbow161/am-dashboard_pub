@@ -1,8 +1,8 @@
 div.card-columns
   - User.all.each do |user|
-    div.card
-      div.card-header
-        span.font-weight-bold = user.fullname
+    div.card.rounded-lg.card-index
+      div.card-header style="transform: rotate(0);"
+        = link_to user.fullname, user_path(user), class: "without-line stretched-link black"
       div.card-body
         p.card-text.d-flex
           = user.user_role.role

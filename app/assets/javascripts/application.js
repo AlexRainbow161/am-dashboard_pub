@@ -20,3 +20,16 @@
 function goto(url) {
     document.location = url
 }
+
+function collapse_side_nav() {
+    $sidenav = $('#sideNav');
+    $container = $('#container');
+    if ($sidenav.css('width') === '0px'){
+        $sidenav.css('width', '20vw');
+        $container.css('opacity', '.5')
+    }
+    else {
+        $sidenav.css('width', '0');
+        $container.css('opacity', '1')
+    }
+}

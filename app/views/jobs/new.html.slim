@@ -1,3 +1,6 @@
 h1 Запланировать выезд
-div.form-wrapper style="max-width: 50%"
-  == render 'form'
+div.form-wrapper.d-flex
+  - if current_user.admin?
+    == render 'form_admin'
+  - else
+    == render 'form'

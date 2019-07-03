@@ -1,0 +1,2 @@
+var users = <%= escape_javascript( pure_users(@users).to_json.to_s ) %>;
+console.log(users)

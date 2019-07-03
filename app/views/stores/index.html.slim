@@ -28,8 +28,8 @@ div.row
     - @stores.each do |store|
       - job = store.jobs.first if store.jobs.any?
       - color = job ? type_color(job.job_type.name) : ""
-      div style="transform: rotate(0);" class="card card-index border border-#{ color } rounded-lg"
-        div.card-header
+      div class="card card-index border border-#{ color } rounded-lg"
+        div.card-header.bold style="transform: rotate(0);"
           div.d-flex
             span = link_to "#{store.name} (#{store.region})", store_path(store), class: "black without-line stretched-link text-#{color}"
             span.ml-auto = store.s_stat
@@ -39,7 +39,12 @@ div.row
             span.text-muted.ml-auto
               small = "IDD: #{store.baseidd}"
         div class="card-body"
-          p class="card-text" = job ? (job.job_type.name + " " + job.status.name + " " + (job.end_date ? human_date(job.end_date) : human_date(job.start_date).to_s)).capitalize + " инженером #{job.user.fullname}" : "Нет известных работ"
+          p class="card-text"
+            - if job
+              = (job.job_type.name + " " + job.status.name + " " + (job.end_date ? human_date(job.end_date) : human_date(job.start_date).to_s)).capitalize + " инженером "
+              = link_to job.user.fullname, user_path(job.user), style: "transform: rotate(0);"
+            - else
+              = "Нет известных работ"
       br
     = will_paginate @stores, renderer: WillPaginate::ActionView::BootstrapLinkRenderer
 

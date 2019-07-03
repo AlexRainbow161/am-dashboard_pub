@@ -10,6 +10,9 @@ class StoresController < ApplicationController
     @stores = @stores.by_user_name(params[:user_name]) if params[:user_name] && !params[:user_name].empty?
     @stores = @stores.by_job_stat(params[:job_status_id]) if params[:job_status_id] && params[:job_status_id] != "0"
     @stores = @stores.by_job_type(params[:job_type_id]) if params[:job_type_id] && params[:job_type_id] != "0"
+    if !params[:s_stat] || params[:s_stat].empty?
+      @stores = @stores.where.not(s_stat: "Закрыт")
+    end
   end
   def show; end
 

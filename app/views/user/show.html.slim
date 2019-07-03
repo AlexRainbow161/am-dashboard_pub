@@ -17,6 +17,7 @@ div.row
             ' Кол-во работ:
           span = @user.jobs.count
         = link_to "Настройка", admin_index_path, class: "card-link" if current_user.admin? && current_user.id == @user.id
+        = link_to "Отчеты", reports_path, class: "card-link" if current_user.id == @user.id
   div.col-md
     - @user.jobs.each do |job|
       - color = type_color(job.job_type.name)

@@ -7,7 +7,8 @@ class AdminController < ApplicationController
     @users = Ldap::LdapHelper.search_by_username(params[:username])
     respond_to do |format|
       format.html {render :index}
-      format.json { render json: users}
+      format.json { render json: @users}
+      format.js
     end
   end
   private

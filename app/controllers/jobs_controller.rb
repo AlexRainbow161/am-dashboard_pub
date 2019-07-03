@@ -1,22 +1,30 @@
 class JobsController < ApplicationController
   before_action :job_params, only: [:create]
   before_action :set_job, only: [:show, :destroy, :edit, :update]
+  before_action :check_edit_job, only: [:destroy, :edit, :update]
   def index
     @jobs = Job.all.paginate(page: params[:page], per_page: 30).order(created_at: :desc)
   end
   def new
     @job = Job.new
     @store = Store.find(params[:store_code])
+    respond_to do |format|
+      format.html
+    end
   end
   def create
-    job = Job.create!(job_params)
+    job = Job.create(job_params)
     if job.save
+      if current_user.admin?
+        notify_user(job)
+      else
+        notify_admins(job)
+      end
       redirect_to store_path(job.store)
     else
-      flash[:danger] = "Ошибка сохранения"
-      redirect_to jobs_path
+      flash[:danger] = "Ошибка сохранения #{job.errors.full_messages}"
+      redirect_back fallback_location: :back
     end
-    # redirect_to new_store_job_path(Store.find(1095))
   end
 
   def show; end
@@ -25,9 +33,9 @@ class JobsController < ApplicationController
 
   def update
     if @job.update(job_params)
-      redirect_to job_path(@job), success: "Работа обновлена"
+      redirect_back fallback_location: :back, success: "Работа обновлена"
     else
-      redirect_to job_path(@job), danger: "Ошибка сохранения"
+      redirect_back fallback_location: :back, danger: "Ошибка сохранения"
     end
   end
 
@@ -47,5 +55,21 @@ class JobsController < ApplicationController
   def set_job
     @job = Job.find(params[:id])
     @store = @job.store
+  end
+
+  def notify_admins(job)
+    User.admins_only.each do |user|
+      JobNotifyMailer.with(job: job, email: user.email).notify_admin.deliver_later
+    end
+  end
+
+  def notify_user(job)
+    JobNotifyMailer.with(job: job, who: current_user).notify_user.deliver_later
+  end
+
+  def check_edit_job
+    if @job.accepted && !current_user.admin?
+      redirect_back fallback_location: :back, danger: "Вы не можете изменить подтвержденную работу"
+    end
   end
 end

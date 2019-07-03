@@ -14,12 +14,14 @@
     <%= link_to 'am-dash', root_path, class: "navbar-brand" %>
     <% if logined? %>
       <div>
+        <% if current_user.admin? %>
+          <% end %>
         <%= link_to current_user.fullname, user_path(current_user), class: "nav-link d-inline text-white" %>
         <%= link_to "Выйти", login_path, method: :delete, class: "nav-link text-white d-inline" %>
       </div>
       <% end %>
   </nav>
-  <div class="container-fluid" style="max-width: 95vw">
+  <div id="container" class="container-fluid" style="max-width: 95vw">
     <% flash.each do |key, value| %>
       <div class="alert alert-<%= key%>"><%= value %>
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
