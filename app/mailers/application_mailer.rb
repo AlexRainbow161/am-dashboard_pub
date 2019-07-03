@@ -1,4 +1,7 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'from@example.com'
+  default from: 'clientsupport@gloria-jeans.ru'
   layout 'mailer'
+  def subject_prepend
+    "[am-dash]"
+  end
 end
