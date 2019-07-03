@@ -44,7 +44,7 @@ Rails.application.configure do
       password:             'jkr5NDPo693RT',
       authentication:       'login',
       enable_starttls_auto: false}
-  config.action_mailer.default_url_options = { host: "localhost:3000" }
+  config.action_mailer.default_url_options = { host: "am-dash.gloria-jeans.ru" }
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
