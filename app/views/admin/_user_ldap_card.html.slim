@@ -1,0 +1,9 @@
+div.card.card-user-ldap
+  div.card-header
+    span
+      = user['displayName'].first
+  div.card-body
+    - unless user_exist? user['sAMAccountName'].first
+      = link_to "Добавить", user_index_path(user: {username: user['sAMAccountName'].first.downcase, fullname: user["displayName"].first, email: user['mail'].first, role_id: 2}), method: :post, class: "card-link"
+    - else
+      p.card-text Пользователь уже добавлен

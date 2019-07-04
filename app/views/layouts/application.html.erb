@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>AmDashboard</title>
+    <title>Автоматизация</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,17 +10,29 @@
   </head>
 
   <body>
-  <nav class="navbar navbar-dark bg-dark sticky-top">
-    <%= link_to 'am-dash', root_path, class: "navbar-brand" %>
-    <% if logined? %>
-      <div>
-        <% if current_user.admin? %>
-          <% end %>
-        <%= link_to current_user.fullname, user_path(current_user), class: "nav-link d-inline text-white" %>
-        <%= link_to "Выйти", login_path, method: :delete, class: "nav-link text-white d-inline" %>
+  <% if logined? %>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <%= link_to "Автоматизация", root_path, class: "navbar-brand" %>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <%= link_to "Магазины", stores_path, class: "nav-link text-white" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Работы", jobs_path, class: "nav-link text-white" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Пользователи", user_index_path, class: "nav-link text-white" %>
+          </li>
+        </ul>
+        <%= link_to current_user.fullname, user_path(current_user), class: "nav-link text-white pl-0" %>
+        <%= link_to "Выход", login_path, method: :delete, class: "nav-link text-white pl-0" %>
       </div>
-      <% end %>
-  </nav>
+    </nav>
+  <% end %>
   <div id="container" class="container-fluid" style="max-width: 95vw">
     <% flash.each do |key, value| %>
       <div class="alert alert-<%= key%>"><%= value %>

@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
   delete 'login' => 'sessions#delete'
+  get 'reports/jobs_all' => 'reports#jobs_all'
   root :to => 'stores#index'
   resources :user do
     resources :jobs
