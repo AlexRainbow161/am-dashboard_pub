@@ -5,7 +5,7 @@
     = f.hidden_field :store_code, value: @store.code
   div.form-group
     = f.label :Дата_начала, for:"start_date", class:"d-block"
-    = f.date_field :start_date, class: "form-control", id:"start_date", value: Date.zone.now
+    = f.date_field :start_date, class: "form-control", id:"start_date", value: @job.start_date.nil? ? Time.zone.now.strftime("%Y-%m-%d") : @job.start_date.strftime("%Y-%m-%d")
   div.form-group
     = f.label :Исполнитель
     input type="text" class="form-control" value="#{current_user.fullname}" readonly="true"
