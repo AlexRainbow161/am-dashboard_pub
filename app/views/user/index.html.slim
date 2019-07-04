@@ -1,18 +1,21 @@
 div.card-columns
   - @users.each do |user|
-    div.card.card-index style="transform: rotate(0)"
+    div.card.card-index style="transform: rotate(0)" onmouseenter="$('div[data=collapse-#{user.username}]').collapse('show')" onmouseleave="$('div[data=collapse-#{user.username}]').collapse('hide')"
       div.card-header
         = link_to user.fullname, user_path(user), class: "without-line stretched-link"
       div.card-body
         -if user.jobs.any?
-          - Status.all.each do |status|
-            ul
-              li
-                '#{status.name}: #{user.jobs.where(status_id: status.id).count}
-                - JobType.all.each do |job_type|
-                  ul
-                    li
-                      '#{job_type.name}: #{user.jobs.where(status_id: status.id, job_type_id: job_type.id).count}
+          div.card-text
+            | Работ: #{user.jobs.count}
+          div.card-text.collapse data="collapse-#{user.username}"
+            - Status.all.each do |status|
+              ul
+                li
+                  '#{status.name}: #{user.jobs.where(status_id: status.id).count}
+                  - JobType.all.each do |job_type|
+                    ul
+                      li
+                        '#{job_type.name}: #{user.jobs.where(status_id: status.id, job_type_id: job_type.id).count}
         - else
           p.card-text
             | Этот пользователь не совершил ни одной работы
