@@ -1,7 +1,9 @@
 class UserController < ApplicationController
   before_action :user_params, only: [:create, :update]
   before_action :set_user, only: [:show, :edit, :update]
-  def index; end
+  def index
+    @users = User.all
+  end
 
   def show; end
 

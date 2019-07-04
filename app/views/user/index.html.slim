@@ -1,2 +1,18 @@
-h1 Hello
-h2 = current_user.fullname
+div.card-columns
+  - @users.each do |user|
+    div.card.mr-0
+      div.card-header
+        = user.fullname
+      div.card-body
+        - Status.all.each do |status|
+          ul
+            li
+              '#{status.name}: #{user.jobs.where(status_id: status.id).count}
+              - JobType.all.each do |job_type|
+                ul
+                  li
+                    '#{job_type.name}: #{user.jobs.where(status_id: status.id, job_type_id: job_type.id).count}
+
+
+
+
