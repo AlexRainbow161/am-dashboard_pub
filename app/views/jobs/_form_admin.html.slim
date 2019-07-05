@@ -15,8 +15,8 @@
     = f.select :user_id, options_for_select(user_select, current_user.id), {}, {class: "form-control"}
   div.form-group
     = f.label :Тип
-    = f.select :job_type_id, options_for_select(select_options_job_type), {}, {class: "form-control"}
+    = f.select :job_type_id, options_for_select(select_options_job_type, @job.job_type_id), {}, {class: "form-control"}
   div.form-group
     = f.label :Статус
-    = f.select :status_id, options_for_select(select_options_job_status), {}, {class: "form-control"}
+    = f.select :status_id, options_for_select(select_options_job_status, @job.status_id), {}, {class: "form-control"}
   = f.submit value: "Сохранить", class: "btn btn-outline-primary"

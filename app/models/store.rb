@@ -13,4 +13,8 @@ class Store < ApplicationRecord
   scope :by_job_stat, ->(job_stat_id) { joins(:jobs).where(jobs: {status_id: job_stat_id}) }
   scope :by_job_type, ->(job_type_id) { joins(:jobs).where(jobs: {job_type_id: job_type_id}) }
   has_many :jobs, foreign_key: :store_code
+
+  def rozn
+    self.email.split('@').first if self.email
+  end
 end
