@@ -11,6 +11,8 @@ class Job < ApplicationRecord
 
   validates :start_date, presence: {message: "Дата начала не может быть пустой"}
   validate :duplicate_one_time_job?, on: :create
+  validate :check_past
+  validate :check_duplicate
   before_save :create_in_sn
 
   def self.to_csv
@@ -28,7 +30,7 @@ class Job < ApplicationRecord
 
   private
   def create_in_sn
-    if self.accepted_changed? && self.accepted_change.last && self.status_id == 1
+    if self.accepted_changed? && self.accepted_change.last && self.status_id == 1 && !self.historical
       ServiceNowApi::ServiceNowApiHelper.create_sn_ppr(self.user.username, self.store.rozn,
                                                        self.start_date.strftime("%d.%m.%Y"),
                                                        self.comment,
@@ -37,9 +39,25 @@ class Job < ApplicationRecord
     end
   end
   def duplicate_one_time_job?
-    if self.store.jobs.any?
+    if self.store.jobs.not_regular.any?
       if self.store.jobs.not_regular.first.job_type.name == self.job_type.name
-        errors.add(:Тип_работы, "Нельзя создать #{job_type.name} поверх #{job_type.name}")
+        errors.add(:Тип_работы, "Нельзя создать #{job_type.name} поверх #{self.store.jobs.not_regular.first.job_type.name}")
+      end
+    end
+  end
+
+  def check_past
+    if !self.historical && self.start_date_changed?
+      if self.start_date < Date.today
+        errors.add(:Дата_начала, "Вы не можете создать работу в прошлом.")
+      end
+    end
+  end
+
+  def check_duplicate
+    if self.store.jobs.any? && self.start_date_changed?
+      if self.store.jobs.where(start_date: self.start_date, user_id: self.user_id).count > 0
+        errors.add(:Дата_начала, "Вы не можете создать две работы в одном магазине в один день.")
       end
     end
   end

@@ -10,7 +10,11 @@ Rails.application.routes.draw do
   resources :stores, param: :code do
     resources :jobs
   end
-  resources :jobs
+  resources :jobs do
+    member do
+      put 'done'
+    end
+  end
   resources :admin do
     collection do
       get "search"

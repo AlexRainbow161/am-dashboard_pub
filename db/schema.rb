@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_27_130802) do
+ActiveRecord::Schema.define(version: 2019_07_05_170937) do
 
   create_table "job_infos", force: :cascade do |t|
     t.integer "job_id"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 2019_06_27_130802) do
     t.integer "job_type_id"
     t.string "store_code"
     t.boolean "accepted"
+    t.boolean "historical", default: false
   end
 
   create_table "statuses", force: :cascade do |t|

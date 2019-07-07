@@ -38,7 +38,7 @@ div.row
               span.font-weight-bold
                 ' Часовой пояс:
               = @store.zone
-          = link_to "Добавить выезд", new_store_job_path(@store), class: "card-link"
+          = link_to "Добавить выезд", new_store_job_path(@store), class: "card-link #{"disabled"}"
   div.col-md
     - @store.jobs.each do |job|
       - color = type_color(job.job_type.name)

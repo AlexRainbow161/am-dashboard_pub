@@ -1,13 +1,16 @@
 class JobsController < ApplicationController
   before_action :job_params, only: [:create]
-  before_action :set_job, only: [:show, :destroy, :edit, :update]
-  before_action :check_edit_job, only: [:destroy, :edit, :update]
+  before_action :set_job, only: [:show, :destroy, :edit, :update, :done]
+  before_action :check_edit_job, only: [:edit, :update, :destroy]
   def index
     @jobs = Job.all.paginate(page: params[:page], per_page: 30).order(created_at: :desc)
   end
   def new
     @job = Job.new
     @store = Store.find(params[:store_code])
+    if @store.jobs.any? && @store.jobs.first.status.name == "Запланировано" && !current_user.admin?
+      redirect_back fallback_location: :back, danger: "Вы не можете создать новый выезд, так как предыдущий еще не завершен"
+    end
     respond_to do |format|
       format.html
     end
@@ -46,15 +49,32 @@ class JobsController < ApplicationController
     end
   end
 
+  def done
+    if current_user.admin? && @job.accepted || current_user.id == @job.user_id && @job.accepted
+      if @job.update(status_id: 3)
+        redirect_back fallback_location: :back, success: "Работа завершена"
+      else
+        redirect_back fallback_location: :back, danger: "Ошибка завершения работы"
+      end
+    else
+      redirect_back fallback_location: :back, danger: "Ошибка завершения работы"
+    end
+  end
+
   private
 
   def job_params
-    params.require(:job).permit(:start_date, :end_date, :store_code, :user_id, :status_id, :job_type_id, :accepted)
+    params.require(:job).permit(:start_date, :end_date, :store_code, :user_id, :status_id, :job_type_id, :accepted, :historical)
   end
 
   def set_job
-    @job = Job.find(params[:id])
-    @store = @job.store
+    begin
+      @job = Job.find(params[:id])
+      @store = @job.store
+    rescue
+      redirect_to root_path, danger: "Нет работы с таким id"
+    end
+
   end
 
   def notify_admins(job)

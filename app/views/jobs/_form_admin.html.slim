@@ -19,4 +19,7 @@
   div.form-group
     = f.label :Статус
     = f.select :status_id, options_for_select(select_options_job_status, @job.status_id), {}, {class: "form-control"}
+  div.form-check
+    = f.check_box :historical, class: "form-check-input", checked: false
+    = f.label :Исторически_выезд?
   = f.submit value: "Сохранить", class: "btn btn-outline-primary"
