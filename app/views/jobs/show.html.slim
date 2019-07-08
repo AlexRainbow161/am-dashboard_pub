@@ -9,5 +9,5 @@ div.card.d-flex style="max-width: 50vw;margin:auto"
     = link_to "Удалить", job_path(@job), method: :delete, class: "card-link text-danger" if @job.user.id == current_user.id || current_user.admin?
     = link_to "Изменить", edit_job_path(@job), class: "card-link" if @job.user.id == current_user.id || current_user.admin?
     = link_to "Отклонить", job_path(@job, job: {accepted: false}), method: :put, class: "card-link" if current_user.admin? && !@job.accepted && @job.status_id != 3
-    = link_to "Подтвердить", job_path(@job, job: {accepted: true}), method: :put, class: "card-link" if current_user.admin? && !@job.accepted && @job.status_id != 3
-    = link_to "Завершить", done_job_path(@job), method: :put, class: "card-link" if @job.user_id == current_user.id && @job.accepted && @job.status_id != 3 || current_user.admin? && @job.accepted && @job.status_id != 3
+    = link_to "Подтвердить",  accept_job_path(@job, job: { status_id: 2, accepted: true}), method: :put, class: "card-link" if current_user.admin? && !@job.accepted && @job.status_id != 3
+    = link_to "Завершить", done_job_path(@job, job: {status_id: (current_user.admin? ? 3 : 5)}), method: :put, class: "card-link" if @job.user_id == current_user.id && @job.accepted && @job.status_id != 5 || current_user.admin? && @job.accepted && @job.status_id != 3

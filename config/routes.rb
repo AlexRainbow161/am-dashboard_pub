@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   resources :jobs do
     member do
       put 'done'
+      put 'accept'
     end
   end
   resources :admin do

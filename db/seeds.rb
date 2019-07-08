@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 unless Status.all.any?
-  status = Status.create!([{ name: "Запланировано" }, { name: "В работе" }, { name: "Завершено" }, { name: "Отменено" }])
+  status = Status.create!([{ name: "Запланировано" }, { name: "В работе" }, { name: "Завершено" }, { name: "Отменено" }, {name: "На рассмотрении"}])
 end
 
 unless JobType.all.any?
