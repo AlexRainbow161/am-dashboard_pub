@@ -7,6 +7,10 @@ gem 'rails', '~> 5.2.3'
 # gem 'tiny_tds'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
+gem 'sqlite3'
+gem 'mysql2'
+# for dumping db rails like
+gem 'yaml_db'
 
 gem 'will_paginate'
 
@@ -44,13 +48,8 @@ gem 'jbuilder', '~> 2.5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
-group :production do
-  gem 'mysql2'
-end
-
 group :development, :test do
   # Use sqlite3 as the database for Active Record
-  gem 'sqlite3'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end

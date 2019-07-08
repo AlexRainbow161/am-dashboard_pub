@@ -12,19 +12,19 @@
 
 ActiveRecord::Schema.define(version: 2019_07_05_170937) do
 
-  create_table "job_infos", force: :cascade do |t|
+  create_table "job_infos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "job_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "job_types", force: :cascade do |t|
+  create_table "job_types", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "name"
   end
 
-  create_table "jobs", force: :cascade do |t|
+  create_table "jobs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "start_date"
     t.datetime "end_date"
     t.integer "user_id"
@@ -37,13 +37,13 @@ ActiveRecord::Schema.define(version: 2019_07_05_170937) do
     t.boolean "historical", default: false
   end
 
-  create_table "statuses", force: :cascade do |t|
+  create_table "statuses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "stores", force: :cascade do |t|
+  create_table "stores", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "code"
     t.string "name"
     t.string "baseidd"
@@ -62,7 +62,7 @@ ActiveRecord::Schema.define(version: 2019_07_05_170937) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "user_default_queries", force: :cascade do |t|
+  create_table "user_default_queries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "query_type"
     t.string "query_data"
     t.integer "user_id"
@@ -70,13 +70,13 @@ ActiveRecord::Schema.define(version: 2019_07_05_170937) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "user_roles", force: :cascade do |t|
+  create_table "user_roles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "role"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "users", force: :cascade do |t|
+  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "username", null: false
     t.string "fullname"
     t.string "email", null: false
