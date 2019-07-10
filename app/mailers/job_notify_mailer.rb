@@ -6,7 +6,7 @@ class JobNotifyMailer < ApplicationMailer
     @job = params[:job]
     @email = params[:email]
     @url = job_url(@job)
-    mail(to: @email, subject: "#{subject_prepend} #{@job.user.fullname} Запланировал работу")
+    mail(to: @email, subject: "#{subject_prepend} #{@job.user.fullname} изменил статус работы на #{@job.status.name}")
   end
 
   def notify_user
