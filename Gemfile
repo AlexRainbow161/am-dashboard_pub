@@ -12,6 +12,8 @@ gem 'mysql2'
 # for dumping db rails like
 gem 'yaml_db'
 
+gem 'jquery-rails'
+
 gem 'will_paginate'
 
 gem 'will_paginate-bootstrap4'
