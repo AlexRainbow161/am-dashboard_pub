@@ -1,6 +1,6 @@
-div.card
+div.card id="user-#{user.id}"
   div.card-header.d-flex
     span.font-weight-bold = user.name
     span.ml-auto = user.user_role.role
   div.card-body
-    = link_to (user.admin? ? "Разжаловать" : "Сделать админом"), "#", class: "card-link"
+    = link_to "Изменить", "#", class: "card-link", "data-action":"edit", "data-toggle":"modal", "data-target":"#exampleModal", "data-user-id": user.id

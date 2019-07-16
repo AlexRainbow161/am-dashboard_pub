@@ -8,10 +8,17 @@ window.search_user = (input) ->
 
 userlist = []
 
+inSearch = false
+
 $(document).on 'turbolinks:load', ->
   document.addEventListener 'userform:load', ->
     $('#username').on 'input', ->
-      search_ldap(this)
+      if this.value.length < 3
+        $('#users').empty()
+        inSearch = false
+      else
+        inSearch = true
+        search_ldap(this)
 
 addDropDownUser = (user)->
   elem = $("<p class='dropdown-item'>#{user.displayname}</p>")
@@ -36,7 +43,7 @@ search_ldap = (context)->
         $("#users").empty()
         userlist.length = 0
         data.map (user)->
-          userlist.push(user.myhash)
-          $('#users').append addDropDownUser(user.myhash)
-        $('#users').dropdown('show')
+          if inSearch
+            userlist.push(user.myhash)
+            $('#users').append addDropDownUser(user.myhash)
 
