@@ -1,0 +1,6 @@
+div.card id="staff-#{staff.id}"
+  div.card-header.d-flex
+    span.font-weight-bold = staff.name
+    span.ml-auto = staff.staff_type.capitalize
+  div.card-body
+    = link_to "Изменить", "#exampleModal", class: "card-link", "data-toggle":"modal", "data-target":"#exampleModal", "data-action": "edit", "data-staff-id": staff.id

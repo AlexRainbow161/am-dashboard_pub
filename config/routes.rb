@@ -16,10 +16,11 @@ Rails.application.routes.draw do
       put 'accept'
     end
   end
-  resources :admin do
-    collection do
-      get "search"
-    end
+  namespace :admin do
+    get 'index' => 'admin#index'
+    resources :users
+    resources :ldap
+    resources :staffs
   end
   resources :reports
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

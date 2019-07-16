@@ -17,9 +17,24 @@ end
 unless UserRole.all.any?
   user_role = UserRole.create!([{role: "Admin"}, {role: "User"}])
 end
+# Раскоментировать что бы сделать все работы подтвержденными
+# Job.all.each do |job|
+#   if job.accepted.nil?
+#     job.update!(accepted: true)
+#   end
+# end
 
-Job.all.each do |job|
-  if job.accepted.nil?
-    job.update!(accepted: true)
-  end
+unless Staff.all.any?
+  puts "Создание начальных значений стафа"
+  Staff.create!([{name: "POS 566", staff_type: 0},
+                {name: "POS 570", staff_type: 0},
+                {name: "Server 3100", staff_type: 0},
+                {name: "Server 3200", staff_type: 0},
+                {name: "Server Lenovo", staff_type: 0},
+                {name: "Server 3300", staff_type: 0},
+                {name: "Касса", staff_type: 1},
+                {name: "Подсобка", staff_type: 1},
+                {name: "Сетевой шкаф", staff_type: 1},
+                {name: "Кассовая зона", staff_type: 1},
+                {name: "Рабочее место", staff_type: 1}])
 end

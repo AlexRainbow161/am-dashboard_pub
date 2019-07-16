@@ -1,4 +1,0 @@
-$('.card-user-ldap').remove();
-<% @users.each do |user| %>
-  $('#card-columns-wrapper').append("<%= escape_javascript(render partial: 'user_ldap_card', locals: {user: user}) %>");
-<% end %>

@@ -1,7 +1,0 @@
-= form_with(url: search_admin_index_path, method: :get) do |f|
-  div.input-group
-    = f.text_field :username, class: "form-control", value: params[:username], placeholder: "Имя пользователя"
-    div.input-group-append
-      = f.submit value: "Найти", class: "btn btn-outline-primary", data: {disable_with: "Поиск"}
-  br
-  div.card-columns id="card-columns-wrapper"

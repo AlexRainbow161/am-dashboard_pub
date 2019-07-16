@@ -28,7 +28,7 @@
             <%= link_to "Пользователи", user_index_path, class: "nav-link text-white" %>
           </li>
         </ul>
-        <%= link_to current_user.fullname, user_path(current_user), class: "nav-link text-white pl-0" %>
+        <%= link_to current_user.name, user_path(current_user), class: "nav-link text-white pl-0" %>
         <%= link_to "Выход", login_path, method: :delete, class: "nav-link text-white pl-0" %>
       </div>
     </nav>
@@ -42,7 +42,7 @@
       </div>
     <% end %>
     <br>
-    <%= yield %>
+    <%= content_for?(:admin) ? yield(:admin) : yield %>
   </div>
   </body>
 </html>

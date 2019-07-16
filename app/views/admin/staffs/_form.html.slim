@@ -1,0 +1,10 @@
+div
+  = form_with(model: [:admin, @staff]) do |f|
+    div.form-group
+      = f.label :Имя
+      = f.text_field :name, class: "form-control", placeholder: "Имя стафа"
+    div.form-group
+      = f.label :Логический_тип
+      = f.select :staff_type, options_for_select(Staff.staff_types.keys, (@staff.staff_type if @staff.staff_type)), {}, {class: "form-control"}
+    div.form-group
+      = f.submit value: "Сохранить", class: "btn btn-outline-primary", data: {disable_with: "Сохранение"}

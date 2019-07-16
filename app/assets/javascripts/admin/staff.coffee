@@ -2,9 +2,9 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-window.search_store = (input)->
-  $.get "stores",
-    {
-      format: "js",
-      name: input
-    }
+
+window.search_staff = (input)->
+  $.get "staffs?format=js",
+    {search: input}
+  return
+

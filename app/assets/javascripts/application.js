@@ -15,6 +15,7 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+//= require_tree ./admin
 
 function goto(url) {
     document.location = url

@@ -17,6 +17,7 @@ class JobsController < ApplicationController
     end
   end
   def create
+    #TODO Переработать отправку сообщений, что бы вынести ее из модели
     @job = Job.new(job_params)
     if @job.save
       if current_user.admin?
@@ -51,6 +52,7 @@ class JobsController < ApplicationController
   end
 
   def accept
+    #TODO Тоже переработать отправку сообщений возможно в коллбэке before_save
     if @job.update(job_accept_params)
       notify_user(@job)
       redirect_back fallback_location: :back, success: "Статус работы изменен на #{@job.status.name}"
@@ -60,6 +62,7 @@ class JobsController < ApplicationController
   end
 
   def done
+    #TODO Переррабоать отправку сообщений для все модели Job
     if current_user.admin?
       if @job.update(job_done_params)
         redirect_back fallback_location: :back, success: "Статус работы изменен на #{@job.status.name}"
@@ -81,7 +84,7 @@ class JobsController < ApplicationController
   def job_params
     params.require(:job).permit(:start_date, :end_date, :store_code, :user_id, :status_id, :job_type_id, :accepted, :historical)
   end
-
+  #TODO Убрать лишние установки параметры в пользу переноса логики в модель
   def job_done_params
     params.require(:job).permit(:status_id)
   end
@@ -99,7 +102,7 @@ class JobsController < ApplicationController
     end
 
   end
-
+ #TODO избавиться от методов отправки в контроллере после переноса их в модель
   def notify_admins(job)
     User.admins_only.each do |user|
       JobNotifyMailer.with(job: job, email: user.email).notify_admin.deliver_later
@@ -109,7 +112,7 @@ class JobsController < ApplicationController
   def notify_user(job)
     JobNotifyMailer.with(job: job, who: current_user).notify_user.deliver_later
   end
-
+  #TODO Поискать способ отправить это в модель, хотя это поидее должно быть тут наверное
   def check_edit_job
     if @job.accepted && !current_user.admin? && @job.status_id != 1
       redirect_back fallback_location: :back, danger: "Вы не можете изменить подтвержденную работу"

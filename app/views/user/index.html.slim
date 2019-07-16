@@ -1,13 +1,13 @@
-div.card-columns
+div.card-columns style="column-count: 5"
   - @users.each do |user|
-    div.card.card-index style="transform: rotate(0)" onmouseenter="$('div[data=collapse-#{user.username}]').collapse('show')" onmouseleave="$('div[data=collapse-#{user.username}]').collapse('hide')"
+    div.card.card-index style="transform: rotate(0)"
       div.card-header
-        = link_to user.fullname, user_path(user), class: "without-line stretched-link"
+        = link_to user.name, user_path(user), class: "without-line stretched-link"
       div.card-body
         -if user.jobs.any?
           div.card-text
             | Работ: #{user.jobs.count}
-          div.card-text.collapse data="collapse-#{user.username}"
+          div.card-text
             - Status.all.each do |status|
               ul
                 li

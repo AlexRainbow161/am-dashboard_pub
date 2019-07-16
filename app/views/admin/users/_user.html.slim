@@ -1,0 +1,6 @@
+div.card
+  div.card-header.d-flex
+    span.font-weight-bold = user.name
+    span.ml-auto = user.user_role.role
+  div.card-body
+    = link_to (user.admin? ? "Разжаловать" : "Сделать админом"), "#", class: "card-link"

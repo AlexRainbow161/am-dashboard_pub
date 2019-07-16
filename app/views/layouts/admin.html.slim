@@ -1,0 +1,10 @@
+- content_for :admin do
+  div.row
+    div.col-3
+      div.nav.flex-column.nav-pills.sticky-top.rounded-lg.border style="top:5em" role="tablist" aria-orientation="vertical"
+        = link_to "Главная", admin_index_path, class: "nav-link #{'active' if controller_name == 'admin'}"
+        = link_to "Пользователи", admin_users_path, class: "nav-link #{'active' if controller_name == 'users'}"
+        = link_to "Стаф", admin_staffs_path, class: "nav-link #{'active' if controller_name == 'staffs'}"
+    div.col
+      == yield
+== render template: 'layouts/application'

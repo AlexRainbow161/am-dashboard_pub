@@ -3,8 +3,7 @@ div.row
     div.card.rounded-lg.sticky-top style="top:5em; padding: 0 0 20px 0"
       div.card-header.d-flex
         span.font-weight-bold
-          - name = @user.fullname.split
-          ' #{name.first} #{name.second}
+          = @user.name
         span.left-flex
           = @user.user_role.role
       div.card-body
