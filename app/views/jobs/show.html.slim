@@ -15,7 +15,7 @@ div.row
         = link_to "Завершить", done_job_path(@job, job: {status_id: (current_user.admin? ? 3 : 5)}), method: :put, class: "card-link" if @job.user_id == current_user.id && @job.accepted && @job.status_id != 5 || current_user.admin? && @job.accepted && @job.status_id != 3
         p.card-text
           br
-          = link_to "Добавить фото", new_job_photo_path(@job), class: "btn btn-primary"
+          = link_to "Добавить фото", new_job_photo_path(@job), class: "btn btn-primary" if current_user.admin? || current_user.id == @job.user.id
   div.col style="max-height: calc(100vh - 6em); overflow-y: auto;"
     div.card-columns
       == render partial: 'photos/photo', collection: @job.photos
