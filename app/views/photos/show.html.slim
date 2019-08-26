@@ -1,4 +1,4 @@
 h3
   span =' @photo.comment
   span = @photo.staff.name
-= image_tag @photo.image, class: "img-fluid"
+= image_tag url_for(@photo.image), class: "img-fluid"
