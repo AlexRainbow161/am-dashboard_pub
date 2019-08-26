@@ -1,0 +1,5 @@
+div.card
+  = image_tag photo.image, class: "card-img-top"
+  div.card-body
+    p.card-text
+      = link_to "#{photo.comment} #{photo.staff.name}", job_photo_path(@job, photo), class: "card-link stretched-link"

@@ -1,0 +1,28 @@
+div.row
+  div.col id="formFields"
+    = form_with(model: @photo, url: [@job, @photo], local: true) do |f|
+      = f.hidden_field :job_id, value: @job.id
+      div.form-group
+        = f.label :Комментарий
+        = f.text_field :comment, class: "form-control"
+      div.form-group
+        = f.label :Тип
+        = f.select :staff_id, options_for_select(staff_select), {}, {class: "form-control"}
+      div.form-group id="fileInput"
+        = f.label :Фотография
+        div.custom-file
+          = f.file_field :image, class: "custom-file-input", id: "customFile", accept: "image/*"
+          = f.label :Выберете_изображение, for: "customFile", class: "custom-file-label", id: "fileLabel"
+      div.form-group
+        = f.submit value: "Загрузить", class: "btn btn-outline-primary"
+  div.col id="previewFile"
+
+javascript:
+  console.log($('#formFields').height());
+  $('#previewFile').css('max-height', $('#formFields').height());
+  $('#customFile').on('change', function (e) {
+      $('#previewFile').empty();
+      console.log(e.target.files[0].name);
+      $('#fileLabel').text(e.target.files[0].name);
+      $('#previewFile').append(`<img class="img-thumbnail" style="max-height: inherit" src="${URL.createObjectURL(e.target.files[0])}"></img>`);
+  });

@@ -1,0 +1,14 @@
+// Place all the styles related to the photos controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.card-img-top{
+  object-fit: cover;
+  height: 15em;
+}
+
+.img-fluid{
+  max-height: calc(100vh - 10em);
+  height: auto;
+  max-width: 100vw;
+}

@@ -1,44 +1,7 @@
 div.row
   div.col-sm-4
     div.sticky-top style="top:5em"
-      div.card
-        div.card-header.d-flex
-          span.font-weight-bold = @store.name
-          span.ml-auto = @store.s_stat
-        div.card-body
-          P.card-text
-            span.font-weight-bold
-              ' Код магазина:
-            = @store.code
-          P.card-text
-            span.font-weight-bold
-              ' IDD Базы:
-            = @store.baseidd
-          P.card-text
-            span.font-weight-bold
-              ' Регион:
-            = @store.region
-          p.card-text
-            span.font-weight-bold
-              ' Email:
-            = @store.email
-          p.card-text
-            span.font-weight-bold
-              ' Адрес:
-            = @store.addr
-            p.card-text
-              span.font-weight-bold
-                ' Время открытия:
-              = @store.time_start
-            p.card-text
-              span.font-weight-bold
-                ' Время закрытия:
-              = @store.time_end
-            p.card-text
-              span.font-weight-bold
-                ' Часовой пояс:
-              = @store.zone
-          = link_to "Добавить выезд", new_store_job_path(@store), class: "card-link #{"disabled"}"
+      == render 'info'
   div.col-md
     - @store.jobs.each do |job|
       - color = type_color(job.job_type.name)
@@ -49,5 +12,6 @@ div.row
           span.ml-auto
             = job.status.name
         div.card-body
-          p.card-text  = link_to job.user.name, user_path(job.user)
+          p.card-text = link_to job.user.name, user_path(job.user)
       br
+
