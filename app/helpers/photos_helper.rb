@@ -6,4 +6,20 @@ module PhotosHelper
     end
     select
   end
+
+  def select_zones
+    select = []
+    Staff.zones.each do |zone|
+      select << [zone.name, zone.id]
+    end
+    select
+  end
+
+  def select_eq
+    select = []
+    Staff.equipment.each do |eq|
+      select << [eq.name, eq.id]
+    end
+    select
+  end
 end

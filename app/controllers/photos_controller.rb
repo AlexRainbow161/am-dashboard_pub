@@ -52,6 +52,6 @@ class PhotosController < ApplicationController
       @job = Job.find(params[:job_id])
     end
     def photo_params
-      params.require(:photo).permit(:job_id, :staff_id, :image, :comment)
+      params.require(:photo).permit(:job_id, :image, :comment, :zone_id, :eq_id)
     end
 end
