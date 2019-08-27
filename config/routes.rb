@@ -15,7 +15,7 @@ Rails.application.routes.draw do
       put 'done'
       put 'accept'
     end
-    resources :photos, only: [:show, :edit, :update, :create, :new]
+    resources :photos, only: [:show, :edit, :update, :create, :new, :destroy]
   end
   namespace :admin do
     get 'index' => 'admin#index'

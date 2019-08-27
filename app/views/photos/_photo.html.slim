@@ -1,5 +1,6 @@
 div.card
   img.card-img-top src="#{url_for(photo.image)}"
   div.card-body
-    p.card-text
-      = link_to "#{photo.comment} #{photo.staff.name}", job_photo_path(@job, photo), class: "card-link stretched-link"
+    p.card-text.d-flex
+      span = link_to "#{photo.comment} #{photo.staff.name}", job_photo_path(@job, photo), class: "card-link"
+      span.ml-auto = link_to "Удалить", job_photo_path(@job, photo), method: :delete, class: "btn btn-danger" if current_user.admin?

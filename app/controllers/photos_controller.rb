@@ -30,6 +30,20 @@ class PhotosController < ApplicationController
     end
   end
 
+  def destroy
+    if @photo.destroy
+      respond_to do |format|
+        format.html {redirect_to job_path(@job), success: "Фото успешно удалено"}
+        format.js
+      end
+    else
+      respond_to do |format|
+        format.html {redirect_to job_path(@job), danger: "Ошибка удаления #{@photo.errors.full_messages}"}
+        format.js
+      end
+    end
+  end
+
   private
     def set_photo
       @photo = Photo.find(params[:id])
