@@ -1,7 +1,8 @@
 div.card.m-auto style="width: max-content"
   div.card-header
+    span =' @photo.zone.name
+    span =' @photo.eq.name
     span =' @photo.comment
-    span = @photo.staff.name
 
   div.card-body.d-flex
     = image_tag url_for(@photo.image), class: "card-img-middle m-auto"
