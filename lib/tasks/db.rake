@@ -7,4 +7,25 @@ namespace :db do
     end
   end
 
+  def load_sql
+    File.read(Rails.root.join('sql_queries', 'sand_query.sql'))
+  end
+  def downcase_row(row)
+    downcaserow = {}
+    row.each do |key, value|
+      downcaserow.merge!("#{key.downcase}": value)
+    end
+    downcaserow
+  end
+  task sync_sandbox: :environment do
+    Store.all.destroy_all
+    query = load_sql
+    require 'tiny_tds'
+    client = TinyTds::Client.new username: "SDUserRead", password: "SDUserRead", dataserver: "REKS:49768", database: "referen"
+    results = client.execute(query)
+    results.each do |row|
+      Store.create!(downcase_row(row))
+    end
+  end
+
 end

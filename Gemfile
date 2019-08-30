@@ -4,7 +4,7 @@ ruby '2.6.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
 # # Use tinyTDS for connect an MS-SQL server
-# gem 'tiny_tds'
+gem 'tiny_tds'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 gem 'sqlite3'
