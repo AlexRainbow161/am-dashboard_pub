@@ -1,11 +1,14 @@
 class Store < ApplicationRecord
   self.primary_key = :code
-  default_scope { includes(:jobs).where("name NOT LIKE '%Ecomm%' AND name NOT LIKE '%TMALL%' AND baseidd IS NOT null") }
+  default_scope { where("name NOT LIKE '%Ecomm%' AND name NOT LIKE '%TMALL%' AND baseidd IS NOT null") }
   scope :by_name, ->(name) { where("name LIKE (?)", "%#{name}%") }
   scope :name_ordered, -> {order(name: :asc)}
-  scope :jobs_new_to_old, -> {order('jobs.start_date desc')}
   scope :by_region, ->(region) { where region: region }
   scope :by_status, ->(s_stat) { where s_stat: s_stat }
+  scope :jobs_new_to_old, -> { joins("left join (
+                                select * from jobs j where start_date =
+                                (select max(start_date) from jobs where store_code = j.store_code))
+                                as jobss on jobss.store_code = stores.code").order('jobss.start_date desc') }
   scope :by_job_date, ->(date_start = nil, date_end = nil) {
     date_start ||= Job.last.start_date
     date_end ||= Time.zone.now
@@ -18,8 +21,5 @@ class Store < ApplicationRecord
 
   def rozn
     self.email.split('@').first if self.email
-  end
-  def self.jobs_old_to_new
-
   end
 end
