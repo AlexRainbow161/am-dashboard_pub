@@ -2,6 +2,7 @@
 
 class ApplicationController < ActionController::Base
   include SessionsHelper
+  include Pagy::Backend
   before_action :authentificate
   add_flash_types :danger, :success
 

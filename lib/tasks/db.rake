@@ -27,5 +27,4 @@ namespace :db do
       Store.create!(downcase_row(row))
     end
   end
-
 end

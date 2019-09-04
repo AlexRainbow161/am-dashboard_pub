@@ -16,6 +16,8 @@ gem 'jquery-rails'
 
 gem 'will_paginate'
 
+gem 'pagy'
+
 gem 'will_paginate-bootstrap4'
 
 gem 'slim-rails'

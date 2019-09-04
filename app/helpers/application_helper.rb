@@ -1,4 +1,5 @@
 module ApplicationHelper
+  include Pagy::Frontend
   def human_date(date)
     if date
       d = Date.strptime(date.to_s, '%Y-%m-%d')

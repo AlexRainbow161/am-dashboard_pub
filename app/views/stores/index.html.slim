@@ -26,7 +26,8 @@ div.row
             = f.submit value: "Показать", class: "btn btn-outline-primary", style: "width:100%;margin:auto" , data: {disable_with: "Поиск"}
   div.col-md data-target="stores-index-wrapper"
     == render partial: 'store', collection: @stores
-    = will_paginate @stores, renderer: WillPaginate::ActionView::BootstrapLinkRenderer
+    /= will_paginate @stores, renderer: WillPaginate::ActionView::BootstrapLinkRenderer
+    == pagy_bootstrap_nav(@pagy)
 
 javascript:
   $(function () {
