@@ -45,7 +45,7 @@ module Admin
     end
     private
     def staff_params
-      params.require(:staff).permit(:name, :staff_type)
+      params.require(:staff).permit(:name, :staff_type, :zone_id)
     end
     def set_staff
       @staff = Staff.find(params[:id])
