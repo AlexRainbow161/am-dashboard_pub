@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b68124d4-853c-42c4-839a-edf54faea5fb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/views/staff/index.html.slim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/staff/index.js.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/photos_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/photos_helper.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/photos/_form.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/photos/_form.html.slim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -54,15 +50,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/helpers/photos_helper.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/photos/_form.html.slim">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
@@ -74,11 +61,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/staff/index.js.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="54" lean-forward="true" selection-start-column="54" selection-end-column="54" />
+              <caret column="88" lean-forward="true" selection-start-column="88" selection-end-column="88" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -152,7 +148,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/views/admin/ldap/index.html.slim" />
         <option value="$PROJECT_DIR$/app/views/admin/users/new.html.slim" />
         <option value="$PROJECT_DIR$/app/models/user_role.rb" />
         <option value="$PROJECT_DIR$/app/controllers/admin/ldap_controller.rb" />
@@ -203,6 +198,7 @@
         <option value="$PROJECT_DIR$/app/helpers/photos_helper.rb" />
         <option value="$PROJECT_DIR$/app/views/staff/index.js.erb" />
         <option value="$PROJECT_DIR$/app/views/photos/_form.html.slim" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
       </list>
     </option>
   </component>
@@ -308,14 +304,14 @@
               <item name="am-dashboard" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="photos" type="462c0819:PsiDirectoryNode" />
+              <item name="layouts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="am-dashboard" type="b2602c69:ProjectViewProjectNode" />
               <item name="am-dashboard" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="staff" type="462c0819:PsiDirectoryNode" />
+              <item name="photos" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="am-dashboard" type="b2602c69:ProjectViewProjectNode" />
@@ -550,12 +546,12 @@
       <workItem from="1562574735988" duration="3858000" />
       <workItem from="1562579147597" duration="3224000" />
       <workItem from="1563197123990" duration="20333000" />
-      <workItem from="1566807195526" duration="65974000" />
+      <workItem from="1566807195526" duration="67731000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="421197000" />
+    <option name="totallyTimeSpent" value="422954000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -621,9 +617,6 @@
     <SUITE FILE_PATH="coverage/am_dashboard@Development__am_dashboard.rcov" NAME="Development: am-dashboard Coverage Results" MODIFIED="1562579150644" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="am-dashboard" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/helpers/admin_helper.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/helpers/sessions_helper.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -917,7 +910,14 @@
     <entry file="file://$PROJECT_DIR$/app/views/staff/index.js.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="54" lean-forward="true" selection-start-column="54" selection-end-column="54" />
+          <caret column="88" lean-forward="true" selection-start-column="88" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
         </state>
       </provider>
     </entry>
