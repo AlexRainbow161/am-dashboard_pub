@@ -7,10 +7,10 @@ div.row
         = f.text_field :comment, class: "form-control"
       div.form-group
         = f.label :Зона
-        = f.select :zone_id, options_for_select(select_zones), {}, {class: "form-control"}
+        = f.select :zone_id, options_for_select(select_zones), {}, {class: "form-control", id: 'zoneSelect'}
       div.form-group
         = f.label :Оборудование
-        = f.select :eq_id, options_for_select(select_eq), {}, { class: "form-control" }
+        = f.select :eq_id, options_for_select(select_eq(select_zones.first[1])), {}, { class: "form-control", id: 'eqSelect' }
       div.form-group id="fileInput"
         = f.label :Фотография
         div.custom-file
@@ -21,10 +21,15 @@ div.row
   div.col id="previewFile"
 
 javascript:
-  console.log($('#formFields').height());
   $('#previewFile').css('max-height', $('#formFields').height());
   $('#customFile').on('change', function (e) {
       $('#previewFile').empty();
       $('#fileLabel').text(e.target.files[0].name);
       $('#previewFile').append(`<img class="img-thumbnail" style="max-height: inherit" src="${URL.createObjectURL(e.target.files[0])}"></img>`);
   });
+  $('#zoneSelect').change(function (e) {
+      var zone_id = e.target.selectedOptions[0].value;
+      $.get(
+          '/staff',
+          {format: 'js',
+           zone_id: zone_id});});

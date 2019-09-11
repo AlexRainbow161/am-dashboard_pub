@@ -1,7 +1,12 @@
 module PhotosHelper
-  def staff_select
+  def staff_select(zone_id = nil)
+    if zone_id
+      @staff = Staff.all.where(zone_id: zone_id)
+    else
+      @staff = Staff.all
+    end
     select = []
-    Staff.all.each do |staff|
+    @staff.all.each do |staff|
       select << [staff.name, staff.id]
     end
     select
@@ -15,9 +20,14 @@ module PhotosHelper
     select
   end
 
-  def select_eq
+  def select_eq(zone_id= nil)
+    if zone_id
+      staff = Staff.equipment.where(zone_id: zone_id)
+    else
+      staff = Staff.equipment
+    end
     select = []
-    Staff.equipment.each do |eq|
+    staff.each do |eq|
       select << [eq.name, eq.id]
     end
     select
