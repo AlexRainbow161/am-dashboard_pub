@@ -5,7 +5,7 @@ div.card.m-auto style="width: max-content"
     span =' @photo.comment
 
   div.card-body.d-flex
-    = image_tag url_for(@photo.image), class: "card-img-middle m-auto"
+    = image_tag url_for(@photo.image.variant(resize: '768x768', rotate: '0', auto_orient: true)), class: "card-img-middle m-auto"
   div.card-footer
     =' link_to "Назад", :back, class: "btn btn-outline-secondary"
     '|

@@ -1,5 +1,5 @@
 div.card
-  = image_tag url_for(photo.image), class: "card-img-top"
+  = image_tag url_for(photo.image.variant(resize: '400x400', rotate: '0', auto_orient: true)), class: "card-img-top"
   div.card-body
     p.card-text.d-flex
       span style="transform: rotate(0)" = link_to "#{photo.zone.name} #{photo.eq.name} #{photo.comment}", job_photo_path(@job, photo), class: "card-link"
