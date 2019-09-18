@@ -3,4 +3,4 @@ div.card
   div.card-body
     p.card-text.d-flex
       span style="transform: rotate(0);" = link_to "#{photo.zone.name} #{photo.eq.name}", job_photo_path(@job, photo), class: "card-link"
-      span.ml-auto style="position: relative" = link_to "Удалить", job_photo_path(@job, photo), method: :delete, class: "btn btn-outline-danger", data: {confirm: "Вы уверены что хотите удалить #{photo.comment}?"} if current_user.admin?
+      /span.ml-auto style="position: relative" = link_to "Удалить", job_photo_path(@job, photo), method: :delete, class: "btn btn-outline-danger", data: {confirm: "Вы уверены что хотите удалить #{photo.comment}?"} if current_user.admin?
