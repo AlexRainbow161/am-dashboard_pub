@@ -14,9 +14,10 @@ class PhotosController < ApplicationController
         format.js
       end
     else
-      puts "******************"
-      puts @photo.errors.full_messages
-      puts "******************"
+      respond_to do |format|
+        format.html {redirect_back fallback_location: :back, danger: @photo.errors.full_messages}
+        format.js
+      end
     end
   end
   def edit; end
