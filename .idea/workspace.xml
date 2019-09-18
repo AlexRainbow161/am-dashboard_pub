@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b68124d4-853c-42c4-839a-edf54faea5fb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/photos/_photo.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/photos/_photo.html.slim" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
@@ -114,7 +115,7 @@
         <entry file="file://$PROJECT_DIR$/app/views/photos/_photo.html.slim">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="26">
-              <caret line="1" column="131" selection-start-line="1" selection-start-column="131" selection-end-line="1" selection-end-column="131" />
+              <caret line="1" column="141" selection-start-line="1" selection-start-column="141" selection-end-line="1" selection-end-column="141" />
             </state>
           </provider>
         </entry>
@@ -221,8 +222,8 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1642" />
-    <option name="y" value="158" />
+    <option name="x" value="1850" />
+    <option name="y" value="236" />
     <option name="width" value="1440" />
     <option name="height" value="823" />
   </component>
@@ -567,12 +568,12 @@
       <workItem from="1566807195526" duration="70277000" />
       <workItem from="1568354677042" duration="337000" />
       <workItem from="1568796525073" duration="79000" />
-      <workItem from="1568796815309" duration="1340000" />
+      <workItem from="1568796815309" duration="1484000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="427256000" />
+    <option name="totallyTimeSpent" value="427400000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -584,7 +585,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1642" y="158" width="1440" height="823" extended-state="0" />
+    <frame x="1850" y="236" width="1440" height="823" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2630435" />
@@ -592,7 +593,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49928468" visible="true" weight="0.5761974" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49928468" weight="0.5761974" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -600,7 +601,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32968536" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4985694" weight="0.29609543" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.4985694" visible="true" weight="0.29608127" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50143063" side_tool="true" weight="0.3132695" />
       <window_info active="true" anchor="bottom" id="Messages" order="12" visible="true" weight="0.32623318" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -940,7 +941,7 @@
     <entry file="file://$PROJECT_DIR$/app/views/photos/_photo.html.slim">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="26">
-          <caret line="1" column="131" selection-start-line="1" selection-start-column="131" selection-end-line="1" selection-end-column="131" />
+          <caret line="1" column="141" selection-start-line="1" selection-start-column="141" selection-end-line="1" selection-end-column="141" />
         </state>
       </provider>
     </entry>
