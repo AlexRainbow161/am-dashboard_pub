@@ -11,4 +11,4 @@ div.card.m-auto style="width: max-content"
     '|
     =' link_to "Оригинал", url_for(@photo.image), target: '_blank', class: "btn btn-outline-secondary"
     '|
-    =' link_to "Удалить", job_photo_path(@job, @photo), method: :delete, class: "btn btn-outline-danger ml-auto", data: {confirm: "Вы уверены что хотите удалить #{@photo.comment}?"}
+    =' link_to "Удалить", job_photo_path(@job, @photo), method: :delete, class: "btn btn-outline-danger ml-auto", data: {confirm: "Вы уверены что хотите удалить #{@photo.comment}?"} if current_user.admin?
