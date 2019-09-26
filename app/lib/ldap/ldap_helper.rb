@@ -25,7 +25,7 @@ module Ldap
         ldap ||= Net::LDAP.new
         ldap.host = "10.61.0.10"
         ldap.port = 389
-        ldap.auth "gj\\bogovid", "Anarhi916@"
+        ldap.auth "gj\\soti", "1@5erCUF@l3Z"
         if ldap.bind
           filter = Net::LDAP::Filter.eq('sAMAccountName', "*#{username}*")
           tree = "dc=gloria,dc=aaanet,dc=ru"
