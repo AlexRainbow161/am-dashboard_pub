@@ -1,0 +1,3 @@
+$('#photoModalBody').html(`<%= render 'show_partial' %>`)
+$('#photoTitleModal').html(`<%= "#{@photo.zone.name} #{@photo.eq.name} #{@photo.comment}" %>`)
+$('#modalPhoto').modal('show');

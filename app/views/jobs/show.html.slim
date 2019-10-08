@@ -1,3 +1,4 @@
+== render 'modal_photo'
 div.row
   div.col-4
     div.card.d-flex style="max-width: 50vw;margin:auto"
@@ -15,7 +16,13 @@ div.row
         = link_to "Завершить", done_job_path(@job, job: {status_id: (current_user.admin? ? 3 : 5)}), method: :put, class: "card-link" if @job.user_id == current_user.id && @job.accepted && @job.status_id != 5 || current_user.admin? && @job.accepted && @job.status_id != 3
         p.card-text
           br
-          = link_to "Добавить фото", new_job_photo_path(@job), class: "btn btn-primary" if current_user.admin? || current_user.id == @job.user.id
+          == render 'add_item_button' if current_user.admin? || current_user.id == @job.user.id
   div.col style="max-height: calc(100vh - 6em); overflow-y: auto;"
-    div.card-columns
-      == render partial: 'photos/photo', collection: @job.photos
+    == render 'tab_menu_show'
+    div.tab-content id="myTabContent"
+      div class="tab-pane fade show active" id="photos" role="tabpanel" aria-labelledby="photos-tab"
+        div.card-columns id="photoCardColumns"
+          == render partial: 'photos/photo', collection: @job.photos
+      div class="tab-pane fade show" id="patch-panel" role="tabpanel" aria-labelledby="patch-panel-tab"
+        - @job.patch_panels.all.each do |patch_panel|
+          == render partial: 'patch_panels/patch_panel', locals: {"@job": @job, patch_panel: patch_panel}

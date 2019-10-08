@@ -1,6 +1,6 @@
 div.row
   div.col id="formFields"
-    = form_with(model: @photo, url: [@job, @photo], local: true) do |f|
+    = form_with(model: @photo, url: [@job, @photo]) do |f|
       = f.hidden_field :job_id, value: @job.id
       div.form-group
         = f.label :Комментарий
@@ -19,18 +19,3 @@ div.row
       div.form-group
         = f.submit value: "Загрузить", class: "btn btn-outline-primary", data: {disable_with: "Загрузка фотографии"}
   div.col id="previewFile"
-
-javascript:
-  $('#previewFile').css('max-height', $('#formFields').height());
-  $('#customFile').on('change', function (e) {
-      $('#previewFile').empty();
-      $('#fileLabel').text(e.target.files[0].name);
-      $('#previewFile').append(`<img class="img-thumbnail" style="max-height: inherit" src="${URL.createObjectURL(e.target.files[0])}"></img>`);
-  });
-  $('#zoneSelect').change(function (e) {
-      var zone_id = e.target.selectedOptions[0].value;
-      $.get(
-          '/staff',
-          {format: 'js',
-           zone_id: zone_id});});
-

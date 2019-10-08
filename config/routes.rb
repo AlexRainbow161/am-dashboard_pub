@@ -8,7 +8,12 @@ Rails.application.routes.draw do
     resources :jobs
   end
   resources :stores, param: :code do
-    resources :jobs
+    resources :jobs do
+      resources :patch_panels do
+        resources :ports
+      end
+      resources :photos, only: [:show, :edit, :update, :create, :new, :destroy]
+    end
   end
   resources :jobs do
     member do
@@ -16,6 +21,9 @@ Rails.application.routes.draw do
       put 'accept'
     end
     resources :photos, only: [:show, :edit, :update, :create, :new, :destroy]
+    resources :patch_panels do
+      resources :ports
+    end
   end
   namespace :admin do
     get 'index' => 'admin#index'

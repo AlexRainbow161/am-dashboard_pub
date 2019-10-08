@@ -2,9 +2,18 @@ class PhotosController < ApplicationController
   before_action :set_photo, except: [:new, :create]
   before_action :set_job
 
-  def show; end
+  def show;
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
   def new
     @photo = Photo.new
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
   def create
     @photo = Photo.new(photo_params)

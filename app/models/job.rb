@@ -8,6 +8,7 @@ class Job < ApplicationRecord
   belongs_to :user
   belongs_to :status
   has_one :job_info
+  has_many :patch_panels
   has_many :photos
 
   validates :start_date, presence: {message: "Дата начала не может быть пустой"}

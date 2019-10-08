@@ -1,0 +1,9 @@
+div.port data-port="#{port.port_number}" data-used="#{port.used}" data-port-id="#{port.id}"
+  - if port.used
+    = image_tag 'eth_on.svg', style: 'height: 64px; width: 64px; padding: 0 8px 0 8px'
+  - elsif !port.empty
+    = image_tag 'eth_empty.svg', style: 'height: 64px; width: 64px; padding: 0 8px 0 8px'
+  - else
+    = image_tag 'eth_off.svg', style: 'height: 64px; width: 64px; padding: 0 8px 0 8px'
+  div style="padding: 0 8px 0 8px"
+    p.border.border-dark.rounded-lg.text-center = port.short_description && port.short_description.length > 0 && port.used ? port.short_description : port.port_number
