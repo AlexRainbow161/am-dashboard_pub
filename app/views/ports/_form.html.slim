@@ -10,7 +10,7 @@
     = f.text_field :comment, class: 'form-control'
   div.form-group
     = f.label "Короткое описание (5 символов)"
-    = f.text_field :short_description, class: 'form-control'
+    = f.text_field :short_description, class: 'form-control', maxlength: 5
   div.form-group
     = f.label :Оборудование
     = f.select :eq_id, options_for_select(select_eq, (@port.eq_id ? @port.eq_id : 0)), {}, { class: "form-control", id: 'eqSelect' }
