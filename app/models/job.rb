@@ -10,6 +10,7 @@ class Job < ApplicationRecord
   has_one :job_info
   has_many :patch_panels
   has_many :photos
+  has_many :registrators
 
   validates :start_date, presence: {message: "Дата начала не может быть пустой"}
   validate :duplicate_one_time_job?, on: :create

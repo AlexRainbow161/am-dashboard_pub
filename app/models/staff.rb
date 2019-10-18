@@ -1,5 +1,5 @@
 class Staff < ApplicationRecord
-  enum staff_type: {Оборудование: 0, Зона: 1}
+  enum staff_type: {Оборудование: 0, Зона: 1, Видеорегистратор: 2}
   validates :name, :staff_type, presence: true
   before_save :empty_zone_id
   scope :equipment, -> {where staff_type: 0}

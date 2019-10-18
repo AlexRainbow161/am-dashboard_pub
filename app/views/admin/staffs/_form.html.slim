@@ -6,7 +6,7 @@ div
     div.form-group
       = f.label :Логический_тип
       = f.select :staff_type, options_for_select(Staff.staff_types.keys, (@staff.staff_type if @staff.staff_type)), {}, {class: "form-control", id: 'type'}
-    div.form-group id="zone_optional" style="#{'display: none;' if @staff.staff_type == 'Зона'}"
+    div.form-group id="zone_optional" style="#{'display: none;' if @staff.staff_type == 'Зона' || @staff.staff_type == 'Видеорегистратор'}"
       = f.label :Зона
       = f.select :zone_id, options_for_select(select_zones, (@staff.zone_id if @staff.zone_id)), {}, {class: 'form-control', id: 'zone'}
     div.form-group
@@ -16,7 +16,7 @@ javascript:
   $('#type').on('change', function (e) {
       if(e.target.selectedOptions[0].value === 'Оборудование'){
           $('#zone_optional').css('display', 'block');
-      }else if (e.target.selectedOptions[0].value === 'Зона'){
+      }else{
           $('#zone_optional').css('display', 'none');
           $('#zone').val('nil');
       }

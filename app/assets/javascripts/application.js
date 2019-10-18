@@ -50,7 +50,7 @@ $(document).on('turbolinks:load', ()=>{
 function patch_panel_load() {
     $('div.port').on('dblclick', (e)=>{
         $('#exampleModalCenter').modal('toggle');
-        $('.modal-header').html(`<h5> Порт номер ${$(e.currentTarget).attr('data-port')}`);
+        $('#portModalTitle').html(`<h5> Порт номер ${$(e.currentTarget).attr('data-port')}`);
         portId = $(e.currentTarget).attr('data-port-id');
         panelId = $('div.patch-panel').attr('data-panel-id');
         jobId = $('div.patch-panel').attr('data-job-id');

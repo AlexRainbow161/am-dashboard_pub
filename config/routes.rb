@@ -13,6 +13,7 @@ Rails.application.routes.draw do
         resources :ports
       end
       resources :photos, only: [:show, :edit, :update, :create, :new, :destroy]
+      resources :registrators
     end
   end
   resources :jobs do
@@ -24,6 +25,7 @@ Rails.application.routes.draw do
     resources :patch_panels do
       resources :ports
     end
+    resources :registrators
   end
   namespace :admin do
     get 'index' => 'admin#index'
