@@ -1,2 +1,2 @@
 $('#exampleModalCenter').modal('hide');
-$('div.port[data-port-id="<%= @port.id %>"]').html(`<%= render partial: 'ports/port', locals: {port: @port} %>`)
+$('div.port[data-port-id="<%= @port.id %>"]').replaceWith(`<%= render partial: 'ports/port', locals: {port: @port} %>`)
