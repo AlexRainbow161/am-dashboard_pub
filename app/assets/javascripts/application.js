@@ -19,6 +19,7 @@
 
 let patch_panel_event = new Event('patch_panel_load');
 let photo_event = new Event('photo_form_load');
+let port_load = new Event('port_load');
 $(document).on('patch_panel_load', ()=>{
     patch_panel_load();
 });
@@ -49,6 +50,7 @@ $(document).on('turbolinks:load', ()=>{
 
 function patch_panel_load() {
     $('div.port').on('dblclick', (e)=>{
+        console.log('event dispatch');
         $('#exampleModalCenter').modal('toggle');
         $('#portModalTitle').html(`<h5> Порт номер ${$(e.currentTarget).attr('data-port')}`);
         portId = $(e.currentTarget).attr('data-port-id');
