@@ -113,8 +113,6 @@
     <orderEntry type="library" scope="PROVIDED" name="web-console (v3.7.0, Remote: ruby-2.6.1-p33) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="websocket-driver (v0.7.1, Remote: ruby-2.6.1-p33) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="websocket-extensions (v0.1.4, Remote: ruby-2.6.1-p33) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="will_paginate (v3.1.8, Remote: ruby-2.6.1-p33) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="will_paginate-bootstrap4 (v0.2.2, Remote: ruby-2.6.1-p33) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="xpath (v3.2.0, Remote: ruby-2.6.1-p33) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="yaml_db (v0.7.0, Remote: ruby-2.6.1-p33) [gem]" level="application" />
   </component>

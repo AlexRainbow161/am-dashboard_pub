@@ -4,7 +4,7 @@
     = f.label :Модель_регистратора
     = f.select :model_id, options_for_select(select_registrators), {}, {class: 'form-control'}
   div.form-group
-    = f.label "IP адрес"
+    = f.label :ip, "IP"
     = f.text_field :ip_address, class: 'form-control'
   div.form-group
     = f.label :Колличество_камер

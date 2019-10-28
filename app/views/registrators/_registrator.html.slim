@@ -1,8 +1,17 @@
 div.border.rounded-lg.border-dark id="#{registrator.id}" style="width: max-content; padding: 8px; margin: 8px;"
   p = "Модель: " + registrator.model.name
   p = registrator.cum_count.to_s + " Камер"
-  p = "IP Адресс: " + registrator.ip_address
+  p = "IP: " + registrator.ip_address
   div.btn-group
-    = link_to "Web интерфейс", "http://#{registrator.ip_address}/", target: :_black, class: 'btn btn-outline-primary', role: 'button'
+    = link_to "Web интерфейс", "http://#{registrator.ip_address}/", target: :_blank, class: 'btn btn-outline-primary border-dark btn-sm', role: 'button'
     - if current_user.admin? || current_user.id = registrator.job.user.id
-      = link_to "Удалить", job_registrator_path(registrator.job.id, registrator.id), :method => :delete, :remote => true, class: 'btn btn-outline-danger ml-auto', role: 'button'
+      = link_to "Удалить", job_registrator_path(registrator.job.id, registrator.id), :method => :delete, :remote => true, class: 'btn btn-outline-danger btn-sm btn-r border-dark ml-auto', role: 'button'
+
+
+css:
+  .btn-l{
+    border-right: none;
+  }
+  .btn-r{
+    border-left: none;
+  }
