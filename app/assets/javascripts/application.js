@@ -50,7 +50,6 @@ $(document).on('turbolinks:load', ()=>{
 
 function patch_panel_load() {
     $('div.port').on('dblclick', (e)=>{
-        console.log('event dispatch');
         $('#exampleModalCenter').modal('toggle');
         $('#portModalTitle').html(`<h5> Порт номер ${$(e.currentTarget).attr('data-port')}`);
         portId = $(e.currentTarget).attr('data-port-id');
