@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b68124d4-853c-42c4-839a-edf54faea5fb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/assets/images/not-available.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.generators" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.generators" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.rakeTasks" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" afterDir="false" />
@@ -406,25 +407,25 @@
     <property name="DatabaseDriversLRU" value="sqlite&#10;mysql" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/assets/images" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Aleksandr\code\am-dashboard\app\assets\images" />
+      <recent name="C:\Users\Aleksandr\code\am-dashboard\app\assets\stylesheets" />
+      <recent name="C:\Users\Aleksandr\code\am-dashboard\app\assets\javascripts" />
+      <recent name="C:\Users\Aleksandr\code\am-dashboard\data" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Aleksandr\code\am-dashboard\app\assets\images" />
       <recent name="C:\Users\Aleksandr\code\am-dashboard\app\assets\javascripts" />
       <recent name="C:\Users\Aleksandr\code\am-dashboard\app\views\ports" />
       <recent name="C:\Users\Aleksandr\code\am-dashboard\app\views\admin\users" />
       <recent name="C:\Users\Aleksandr\code\am-dashboard\app\views\admin\admin" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Aleksandr\code\am-dashboard\app\assets\images" />
-      <recent name="C:\Users\Aleksandr\code\am-dashboard\app\assets\stylesheets" />
-      <recent name="C:\Users\Aleksandr\code\am-dashboard\app\assets\javascripts" />
-      <recent name="C:\Users\Aleksandr\code\am-dashboard\data" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -591,7 +592,7 @@
       <workItem from="1573463594386" duration="36000" />
       <workItem from="1573463714624" duration="81000" />
       <workItem from="1573463832699" duration="4203000" />
-      <workItem from="1574063421298" duration="733000" />
+      <workItem from="1574063421298" duration="3164000" />
     </task>
     <servers />
   </component>

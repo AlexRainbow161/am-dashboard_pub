@@ -32,4 +32,11 @@ module PhotosHelper
     end
     select
   end
+  def try_resize(image, resolution)
+    begin
+      image.variant(resize: resolution, rotate: '0', auto_orient: true)
+    rescue
+      "not-available.png"
+    end
+  end
 end
