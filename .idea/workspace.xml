@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b68124d4-853c-42c4-839a-edf54faea5fb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/assets/images/not-available.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.generators" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.generators" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.rakeTasks" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" afterDir="false" />
@@ -30,6 +29,7 @@
       <change beforePath="$PROJECT_DIR$/app/assets/images/eth_off.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/images/eth_off.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/assets/images/eth_on.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/images/eth_on.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/assets/images/ethernet.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/images/ethernet.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/images/not-available.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/images/not-available.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/assets/images/plug.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/images/plug.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/assets/javascripts/admin.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/admin.coffee" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/assets/javascripts/admin/ldap.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/admin/ldap.coffee" afterDir="false" />
@@ -411,7 +411,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="language.elixir" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -592,7 +592,9 @@
       <workItem from="1573463594386" duration="36000" />
       <workItem from="1573463714624" duration="81000" />
       <workItem from="1573463832699" duration="4203000" />
-      <workItem from="1574063421298" duration="3164000" />
+      <workItem from="1574063421298" duration="6377000" />
+      <workItem from="1574168512525" duration="2249000" />
+      <workItem from="1574236802840" duration="4590000" />
     </task>
     <servers />
   </component>

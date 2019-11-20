@@ -17,6 +17,7 @@ gem 'jquery-rails'
 
 gem 'pagy'
 
+gem 'lodash-rails'
 
 gem 'slim-rails'
 

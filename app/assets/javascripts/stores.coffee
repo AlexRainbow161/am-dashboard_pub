@@ -3,8 +3,12 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 window.search_store = (input)->
+  debounceSearch input
+  return
+search = (value) ->
   $.get "stores",
-    {
-      format: "js",
-      name: input
-    }
+    format: "js"
+    name: value
+  return
+
+debounceSearch = _.debounce search, 300
