@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b68124d4-853c-42c4-839a-edf54faea5fb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/views/events/_event_job.html.slim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.generators" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.generators" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.rakeTasks" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" afterDir="false" />
@@ -42,6 +41,7 @@
       <change beforePath="$PROJECT_DIR$/app/assets/javascripts/cable.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/cable.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/assets/javascripts/channels/.keep" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/channels/.keep" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/assets/javascripts/cropper.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/cropper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/events.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/events.coffee" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/assets/javascripts/jobs.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/jobs.coffee" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/assets/javascripts/patch_panels.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/patch_panels.coffee" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/assets/javascripts/photos.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/photos.coffee" afterDir="false" />
@@ -64,6 +64,7 @@
       <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/bootstrap.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/bootstrap.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/bootstrap.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/cropper.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/cropper.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/events.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/events.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/jobs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/jobs.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/patch_panels.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/patch_panels.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/photos.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/photos.scss" afterDir="false" />
@@ -82,6 +83,7 @@
       <change beforePath="$PROJECT_DIR$/app/controllers/admin/users_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/admin/users_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/concerns/.keep" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/concerns/.keep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/events_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/events_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/jobs_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/jobs_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/patch_panels_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/patch_panels_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/photos_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/photos_controller.rb" afterDir="false" />
@@ -97,6 +99,7 @@
       <change beforePath="$PROJECT_DIR$/app/helpers/admin/users_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/admin/users_helper.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/helpers/admin_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/admin_helper.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/events_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/events_helper.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/helpers/jobs_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/jobs_helper.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/helpers/patch_panels_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/patch_panels_helper.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/helpers/photos_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/photos_helper.rb" afterDir="false" />
@@ -115,6 +118,7 @@
       <change beforePath="$PROJECT_DIR$/app/mailers/job_notify_mailer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/mailers/job_notify_mailer.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/application_record.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/application_record.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/concerns/.keep" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/concerns/.keep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/event.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/event.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/job.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/job.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/job_info.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/job_info.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/job_type.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/job_type.rb" afterDir="false" />
@@ -153,6 +157,7 @@
       <change beforePath="$PROJECT_DIR$/app/views/admin/users/new.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/users/new.html.slim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/admin/users/new.js.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/users/new.js.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/admin/users/update.js.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/users/update.js.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/events/_event_job.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/events/_event_job.html.slim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/job_notify_mailer/notify_admin.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/job_notify_mailer/notify_admin.html.slim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/job_notify_mailer/notify_user.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/job_notify_mailer/notify_user.html.slim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/jobs/_add_item_button.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/jobs/_add_item_button.html.slim" afterDir="false" />
@@ -264,6 +269,9 @@
       <change beforePath="$PROJECT_DIR$/db/migrate/20191017090937_create_registrators.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20191017090937_create_registrators.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/migrate/20191017123035_add_fields_to_registrator.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20191017123035_add_fields_to_registrator.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/migrate/20191018063651_delete_web_interface_from_registrators.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20191018063651_delete_web_interface_from_registrators.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20191120132355_create_events.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20191120132355_create_events.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20191120144825_add_readed_to_event.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20191120144825_add_readed_to_event.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20191121094400_add_comment_to_event.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20191121094400_add_comment_to_event.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/assets/.keep" beforeDir="false" afterPath="$PROJECT_DIR$/lib/assets/.keep" afterDir="false" />
@@ -288,6 +296,7 @@
       <change beforePath="$PROJECT_DIR$/test/controllers/admin/staff_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/admin/staff_controller_test.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/controllers/admin/users_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/admin/users_controller_test.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/controllers/admin_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/admin_controller_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/controllers/events_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/events_controller_test.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/controllers/jobs_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/jobs_controller_test.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/controllers/patch_panels_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/patch_panels_controller_test.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/controllers/photos_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/photos_controller_test.rb" afterDir="false" />
@@ -299,6 +308,7 @@
       <change beforePath="$PROJECT_DIR$/test/controllers/stores_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/stores_controller_test.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/controllers/user_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/user_controller_test.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/fixtures/.keep" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/.keep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/fixtures/events.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/events.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/fixtures/files/.keep" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/files/.keep" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/fixtures/job_infos.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/job_infos.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/fixtures/job_types.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/job_types.yml" afterDir="false" />
@@ -319,6 +329,7 @@
       <change beforePath="$PROJECT_DIR$/test/mailers/job_notify_mailer_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/mailers/job_notify_mailer_test.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/mailers/previews/job_notify_mailer_preview.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/mailers/previews/job_notify_mailer_preview.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/models/.keep" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/.keep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/models/event_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/event_test.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/models/job_info_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/job_info_test.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/models/job_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/job_test.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/models/job_type_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/job_type_test.rb" afterDir="false" />
@@ -595,7 +606,7 @@
       <workItem from="1573463832699" duration="4203000" />
       <workItem from="1574063421298" duration="6377000" />
       <workItem from="1574168512525" duration="2249000" />
-      <workItem from="1574236802840" duration="23634000" />
+      <workItem from="1574236802840" duration="23834000" />
     </task>
     <servers />
   </component>

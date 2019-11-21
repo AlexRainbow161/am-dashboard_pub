@@ -24,7 +24,9 @@
           <%= link_to("#", class: "nav-link text-white dropdown-toggle", id: "dropdownMenuLink", "data-toggle": "dropdown", "aria-haspopup": true, "aria-expanded": false) do %>
           <span>
             Сообщения
-            <span class="badge badge-danger"><%= current_user.events.count %></span>
+            <% if current_user.events.count > 0 %>
+              <span class="badge badge-danger"><%= current_user.events.count %></span>
+            <% end %>
           </span>
           <% end %>
           <div class="dropdown-menu dropdown-menu-right event-menu" aria-labelledby="dropdownMenuLink">
