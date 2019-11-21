@@ -20,6 +20,21 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
         </ul>
+        <div class="dropdown">
+          <%= link_to("#", class: "nav-link text-white dropdown-toggle", id: "dropdownMenuLink", "data-toggle": "dropdown", "aria-haspopup": true, "aria-expanded": false) do %>
+          <span>
+            Сообщения
+            <span class="badge badge-danger"><%= current_user.events.count %></span>
+          </span>
+          <% end %>
+          <div class="dropdown-menu dropdown-menu-right event-menu" aria-labelledby="dropdownMenuLink">
+            <% current_user.events.unreaded.each do |event| %>
+              <div class="dropdown-item event-item">
+                <%= render partial: "events/event_#{event.subject.class.to_s.downcase}", locals: {event: event} %>
+              </div>
+            <% end %>
+          </div>
+        </div>
         <%= link_to current_user.name, user_path(current_user), class: "nav-link text-white pl-0" %>
         <%= link_to "Выход", login_path, method: :delete, class: "nav-link text-white pl-0" %>
       </div>

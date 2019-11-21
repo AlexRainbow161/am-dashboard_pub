@@ -36,3 +36,16 @@
 #container{
     transition: 300ms;
 }
+.dropdown-item.event-item.active, .dropdown-item.event-item:active{
+    color: inherit;
+    background-color: unset;
+}
+.dropdown-item.event-item{
+    padding: 0;
+}
+.card.event-card{
+    border: unset;
+}
+.dropdown-menu.event-menu{
+    padding: 0;
+}

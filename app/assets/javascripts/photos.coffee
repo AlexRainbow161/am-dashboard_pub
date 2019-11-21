@@ -9,9 +9,9 @@ $(document).on "turbolinks:load", ->
     $('#fileLabel').text e.target.files[0].name
     $('#previewFile').css 'max-height', $('#formFields').height
     $('#previewFile').append "<img class='img-thumbnail' style='max-height: inherit' src='#{URL.createObjectURL(e.target.files[0])}'></img>"
-    $('#zoneSelect').on 'change', (e) ->
-      zone_id = e.target.selectedOptions[0].value
-      $.get '/staff',
-        format: 'js'
-        zone_id: zone_id
-      return
+  $('body').on 'change', "#zoneSelect" ,  (e) ->
+    zone_id = e.target.selectedOptions[0].value
+    $.get '/staff',
+      format: 'js'
+      zone_id: zone_id
+    return

@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   root :to => 'stores#index'
   resources :user do
     resources :jobs
+    resources :events
   end
   resources :stores, param: :code do
     resources :jobs do

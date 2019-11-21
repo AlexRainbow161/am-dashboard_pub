@@ -6,6 +6,7 @@ class User < ApplicationRecord
   belongs_to :user_role, foreign_key: :role_id
   has_many :jobs
   has_many :user_default_queries
+  has_many :events
 
   def firstname
     fullname.split.first

@@ -1,0 +1,20 @@
+div.card.event-card style="width: 100%"
+  div.card-header.event-card
+    strong Изменение работы
+    button type="button" class="close" aria-label="Close"
+      span aria-hidden="true" &times;
+  div.card-body.event-card
+    p.card-text
+      =' link_to "#{event.from_user.name}", user_path(event.from_user)
+      ' изменил cтатус вашей
+      =' link_to "работы", job_path(event.subject)
+    p.card-text
+      ' в магазине
+      =' link_to "#{event.subject.store.name}", store_path(event.subject.store)
+    p.card-text
+      span =' "Новый статус:"
+      strong = event.subject.status.name
+    - if !!event.comment
+      p.card-text
+        =' "С комментарием:"
+        span.font-italic = event.comment
