@@ -24,17 +24,21 @@
           <%= link_to("#", class: "nav-link text-white dropdown-toggle", id: "dropdownMenuLink", "data-toggle": "dropdown", "aria-haspopup": true, "aria-expanded": false) do %>
           <span>
             Сообщения
-            <% if current_user.events.count > 0 %>
-              <span class="badge badge-danger"><%= current_user.events.count %></span>
+            <% if current_user.events.unreaded.count > 0 %>
+              <span id="event-badge" class="badge badge-danger"><%= current_user.events.unreaded.count %></span>
             <% end %>
           </span>
           <% end %>
-          <div class="dropdown-menu dropdown-menu-right event-menu" aria-labelledby="dropdownMenuLink">
-            <% current_user.events.unreaded.each do |event| %>
-              <div class="dropdown-item event-item">
-                <%= render partial: "events/event_#{event.subject.class.to_s.downcase}", locals: {event: event} %>
+          <div style="max-height: 50vh; overflow-y: auto" class="dropdown-menu dropdown-menu-right event-menu" aria-labelledby="dropdownMenuLink">
+            <% current_user.events.unreaded.order(created_at: :desc).each do |event| %>
+              <div class="dropdown-item event-item" id="event-<%= event.id %>">
+                <%= render partial: "events/event_#{class_to_s event.subject}_#{event.event_type}", locals: {event: event, context: "dropdown"} %>
               </div>
             <% end %>
+            <div class="dropdown-divider"></div>
+            <div class="dropdown-item" style="text-align: center">
+              <%= link_to "Показать больше", user_events_path(current_user), class: "dropdown-item text-primary" %>
+            </div>
           </div>
         </div>
         <%= link_to current_user.name, user_path(current_user), class: "nav-link text-white pl-0" %>

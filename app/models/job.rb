@@ -16,7 +16,8 @@ class Job < ApplicationRecord
   validate :duplicate_one_time_job?, on: :create
   validate :check_past
   validate :check_duplicate
-  before_save :create_in_sn
+  before_save
+  #before_save :create_in_sn
 
   def self.to_csv
     atrributes = %w{Тип Статус Магазин Инженер Дата}

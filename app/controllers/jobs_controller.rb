@@ -1,6 +1,5 @@
 class JobsController < ApplicationController
-  before_action :job_params, only: [:create]
-  before_action :set_job, only: [:show, :destroy, :edit, :update, :done, :accept]
+  before_action :set_job, only: [:show, :destroy, :edit, :update, :done, :accept, :return_to_work]
   before_action :check_edit_job, only: [:edit, :update, :destroy]
   before_action :admin_acces, only: [:accept]
   def index
@@ -51,6 +50,21 @@ class JobsController < ApplicationController
     end
   end
 
+  def return_to_work
+    if params[:show_modal]
+      respond_to do |format|
+        format.js {render partial: "return_to_work_modal"}
+      end
+    else
+      comment = params[:job][:comment]
+      if @job.update(job_params)
+        notify_user(@job, comment)
+        respond_to do |format|
+          format.js
+        end
+      end
+    end
+  end
   def accept
     #TODO Тоже переработать отправку сообщений возможно в коллбэке before_save
     if @job.update(job_accept_params)
@@ -105,11 +119,13 @@ class JobsController < ApplicationController
  #TODO избавиться от методов отправки в контроллере после переноса их в модель
   def notify_admins(job)
     User.admins_only.each do |user|
+      Event.create!(user_id: user.id, from_user_id: job.user.id, serialized_subject: {class_name: job.class.to_s, id: job.id}, readed: false, event_type: 1)
       JobNotifyMailer.with(job: job, email: user.email).notify_admin.deliver_later
     end
   end
 
-  def notify_user(job)
+  def notify_user(job, comment=nil)
+    Event.create!(user_id: job.user.id, from_user_id: current_user.id, serialized_subject: {class_name: job.class.to_s, id: job.id}, readed: false, event_type: 1, comment: comment)
     JobNotifyMailer.with(job: job, who: current_user).notify_user.deliver_later
   end
   #TODO Поискать способ отправить это в модель, хотя это поидее должно быть тут наверное

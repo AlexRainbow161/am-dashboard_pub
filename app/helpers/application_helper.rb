@@ -8,4 +8,7 @@ module ApplicationHelper
       time = "Не указана дата"
     end
   end
+  def class_to_s(klass)
+    klass.class.to_s.downcase
+  end
 end

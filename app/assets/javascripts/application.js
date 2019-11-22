@@ -19,20 +19,7 @@
 //= require_tree ./admin
 
 
-//delete aftter testing
-// function goto(url) {
-//     document.location = url
-// }
-//
-// function collapse_side_nav() {
-//     $sidenav = $('#sideNav');
-//     $container = $('#container');
-//     if ($sidenav.css('width') === '0px'){
-//         $sidenav.css('width', '20vw');
-//         $container.css('opacity', '.5')
-//     }
-//     else {
-//         $sidenav.css('width', '0');
-//         $container.css('opacity', '1')
-//     }
-// }
+function remove_event_from_dropdown(eventId, unreadedEvents){
+    $(`#event-${eventId}`).remove();
+    $('#event-badge')[0].innerText = unreadedEvents;
+}

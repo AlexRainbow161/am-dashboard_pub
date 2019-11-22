@@ -2,6 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b68124d4-853c-42c4-839a-edf54faea5fb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/views/events/index.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/events/update.js.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/jobs/_job_card.html.slim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/jobs/_return_to_work_modal.js.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/jobs/_return_to_work_modal_form.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/jobs/return_to_work.js.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.generators" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.generators" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.rakeTasks" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" afterDir="false" />
@@ -157,7 +163,7 @@
       <change beforePath="$PROJECT_DIR$/app/views/admin/users/new.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/users/new.html.slim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/admin/users/new.js.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/users/new.js.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/admin/users/update.js.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/users/update.js.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/events/_event_job.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/events/_event_job.html.slim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/events/_event_job.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/events/_event_job_user.html.slim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/job_notify_mailer/notify_admin.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/job_notify_mailer/notify_admin.html.slim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/job_notify_mailer/notify_user.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/job_notify_mailer/notify_user.html.slim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/jobs/_add_item_button.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/jobs/_add_item_button.html.slim" afterDir="false" />
@@ -391,17 +397,6 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>&quot;&quot;</find>
-      <find>&quot;</find>
-      <find>end_date</find>
-      <find>br</find>
-      <find>config.action_mailer</find>
-      <find>Z2pfcmVzdDpCV0liV1BNOQ==</find>
-      <find>host</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -606,7 +601,8 @@
       <workItem from="1573463832699" duration="4203000" />
       <workItem from="1574063421298" duration="6377000" />
       <workItem from="1574168512525" duration="2249000" />
-      <workItem from="1574236802840" duration="23834000" />
+      <workItem from="1574236802840" duration="31643000" />
+      <workItem from="1574403706428" duration="15074000" />
     </task>
     <servers />
   </component>

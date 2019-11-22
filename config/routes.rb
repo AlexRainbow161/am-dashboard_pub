@@ -21,6 +21,7 @@ Rails.application.routes.draw do
     member do
       put 'done'
       put 'accept'
+      put 'return_to_work'
     end
     resources :photos, only: [:show, :edit, :update, :create, :new, :destroy]
     resources :patch_panels do

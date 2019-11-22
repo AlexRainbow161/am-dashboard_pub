@@ -8,7 +8,12 @@ class Event < ApplicationRecord
   scope :unreaded, -> {where readed: false}
 
   def subject
-    @subject ||= serialized_subject[:class_name].constantize.find serialized_subject[:id]
+    begin
+      @subject ||= serialized_subject[:class_name].constantize.find serialized_subject[:id]
+    rescue
+      @subject ||= serialized_subject[:class_name].constantize.new
+    end
+
   end
   def from_user
     if event_type == "user"
