@@ -81,14 +81,14 @@ class JobsController < ApplicationController
       if @job.update(job_done_params)
         redirect_back fallback_location: :back, success: "Статус работы изменен на #{@job.status.name}"
       else
-        redirect_back fallback_location: :back, success: "Ошибка завершения | #{@job.errors.full_messages}"
+        redirect_back fallback_location: :back, danger: "Ошибка завершения | #{@job.errors.full_messages}"
       end
     elsif current_user.id == @job.user.id
       if @job.update(job_done_params)
         notify_admins(@job)
         redirect_back fallback_location: :back, success: "Статус работы изменен на #{@job.status.name}"
       else
-        redirect_back fallback_location: :back, success: "Ошибка завершения | #{@job.errors.full_messages}"
+        redirect_back fallback_location: :back, danger: "Ошибка завершения | #{@job.errors.full_messages}"
       end
     end
   end

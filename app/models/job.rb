@@ -16,6 +16,7 @@ class Job < ApplicationRecord
   validate :duplicate_one_time_job?, on: :create
   validate :check_past
   validate :check_duplicate
+  validate :check_required_photos
   before_save
   #before_save :create_in_sn
 
@@ -62,6 +63,16 @@ class Job < ApplicationRecord
     if self.store.jobs.any? && self.start_date_changed?
       if self.store.jobs.where(start_date: self.start_date, user_id: self.user_id).count > 0
         errors.add(:Дата_начала, "Вы не можете создать две работы в одном магазине в один день.")
+      end
+    end
+  end
+  def check_required_photos
+    if status.id == 5
+      phts = photos.includes(:eq)
+      Staff.required.each do |req_staff|
+        unless phts.exists?(eq_id: req_staff.id)
+          errors.add("Обязательное_фото_не_добавлено ->", req_staff.name)
+        end
       end
     end
   end

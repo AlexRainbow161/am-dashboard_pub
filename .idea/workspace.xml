@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b68124d4-853c-42c4-839a-edf54faea5fb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/views/events/index.html.slim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/events/update.js.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/jobs/_job_card.html.slim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/jobs/_return_to_work_modal.js.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/jobs/_return_to_work_modal_form.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/jobs/return_to_work.js.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.generators" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.generators" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.rakeTasks" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" afterDir="false" />
@@ -163,17 +157,23 @@
       <change beforePath="$PROJECT_DIR$/app/views/admin/users/new.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/users/new.html.slim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/admin/users/new.js.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/users/new.js.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/admin/users/update.js.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/users/update.js.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/events/_event_job.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/events/_event_job_user.html.slim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/events/_event_job_user.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/events/_event_job_user.html.slim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/events/index.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/events/index.html.slim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/events/update.js.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/events/update.js.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/job_notify_mailer/notify_admin.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/job_notify_mailer/notify_admin.html.slim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/job_notify_mailer/notify_user.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/job_notify_mailer/notify_user.html.slim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/jobs/_add_item_button.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/jobs/_add_item_button.html.slim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/jobs/_form.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/jobs/_form.html.slim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/jobs/_form_admin.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/jobs/_form_admin.html.slim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/jobs/_job_card.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/jobs/_job_card.html.slim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/jobs/_modal_photo.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/jobs/_modal_photo.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/jobs/_return_to_work_modal.js.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/jobs/_return_to_work_modal.js.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/jobs/_return_to_work_modal_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/jobs/_return_to_work_modal_form.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/jobs/_tab_menu_show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/jobs/_tab_menu_show.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/jobs/edit.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/jobs/edit.html.slim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/jobs/index.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/jobs/index.html.slim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/jobs/new.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/jobs/new.html.slim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/jobs/return_to_work.js.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/jobs/return_to_work.js.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/jobs/show.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/jobs/show.html.slim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/layouts/admin.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/admin.html.slim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
@@ -602,7 +602,7 @@
       <workItem from="1574063421298" duration="6377000" />
       <workItem from="1574168512525" duration="2249000" />
       <workItem from="1574236802840" duration="31643000" />
-      <workItem from="1574403706428" duration="15074000" />
+      <workItem from="1574403706428" duration="22030000" />
     </task>
     <servers />
   </component>

@@ -7,9 +7,6 @@ class Photo < ApplicationRecord
 
   def precense_image
     if self.image.attached?
-      puts '*********************'
-      puts "Attaached"
-      puts '*********************'
     else
       self.errors.add(:image, "Изображение должно быть добавлено")
     end

@@ -5,6 +5,7 @@ class Staff < ApplicationRecord
   scope :equipment, -> {where staff_type: 0}
   scope :zones, -> {where staff_type: 1}
   scope :name_search, ->(name) {where "name like (?)", "%#{name}%"}
+  scope :required, -> {where required: true}
   has_one :equpments, class_name: 'Staff', foreign_key: :zone_id
   belongs_to :zone, class_name: 'Staff', optional: true
 
