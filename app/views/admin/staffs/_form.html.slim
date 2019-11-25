@@ -17,7 +17,7 @@ div
 
 javascript:
   $('#type').on('change', function (e) {
-      if(e.target.selectedOptions[0].value === 'Оборудование'){
+      if(e.target.selectedOptions[0].value === 'Оборудование' || e.target.selectedOptions[0].value === 'Отчет'){
           $('#zone_optional').css('display', 'block');
           $('#formCheckReqOpt').css('display', 'block');
       }else{

@@ -22,7 +22,7 @@ module PhotosHelper
 
   def select_eq(zone_id= nil)
     if zone_id
-      staff = Staff.equipment.where(zone_id: zone_id)
+      staff = Staff.where(zone_id: zone_id)
     else
       staff = Staff.equipment
     end
