@@ -278,6 +278,7 @@
       <change beforePath="$PROJECT_DIR$/db/migrate/20191120132355_create_events.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20191120132355_create_events.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/migrate/20191120144825_add_readed_to_event.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20191120144825_add_readed_to_event.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/migrate/20191121094400_add_comment_to_event.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20191121094400_add_comment_to_event.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20191123131535_add_required_to_staff.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20191123131535_add_required_to_staff.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/assets/.keep" beforeDir="false" afterPath="$PROJECT_DIR$/lib/assets/.keep" afterDir="false" />
@@ -602,7 +603,7 @@
       <workItem from="1574063421298" duration="6377000" />
       <workItem from="1574168512525" duration="2249000" />
       <workItem from="1574236802840" duration="31643000" />
-      <workItem from="1574403706428" duration="22030000" />
+      <workItem from="1574403706428" duration="23994000" />
     </task>
     <servers />
   </component>

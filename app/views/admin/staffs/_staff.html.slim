@@ -1,4 +1,4 @@
-div.card id="staff-#{staff.id}"
+div.card id="staff-#{staff.id}" class="#{"border-warning" if staff.required}"
   div.card-header.d-flex
     span.font-weight-bold = staff.name
     span.ml-auto = staff.staff_type.capitalize
