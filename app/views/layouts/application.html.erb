@@ -6,6 +6,8 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= action_cable_meta_tag %>
+    <meta name="user-id" content="<%= current_user.id if current_user %>">
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= favicon_link_tag asset_path('GJ.ico') %>
   </head>
@@ -24,12 +26,10 @@
           <%= link_to("#", class: "nav-link text-white dropdown-toggle", id: "dropdownMenuLink", "data-toggle": "dropdown", "aria-haspopup": true, "aria-expanded": false) do %>
           <span>
             Сообщения
-            <% if current_user.events.unreaded.count > 0 %>
-              <span id="event-badge" class="badge badge-danger"><%= current_user.events.unreaded.count %></span>
-            <% end %>
+              <span id="event-badge" class="badge badge-danger <%= 'd-none' if current_user.events.unreaded.count < 1 %>"><%= current_user.events.unreaded.count %></span>
           </span>
           <% end %>
-          <div style="max-height: 50vh; overflow-y: auto" class="dropdown-menu dropdown-menu-right event-menu" aria-labelledby="dropdownMenuLink">
+          <div style="max-height: 50vh; overflow-y: auto; min-width: 30em" class="dropdown-menu dropdown-menu-right event-menu" aria-labelledby="dropdownMenuLink">
             <% current_user.events.unreaded.order(created_at: :desc).each do |event| %>
               <div class="dropdown-item event-item" id="event-<%= event.id %>">
                 <%= render partial: "events/event_#{class_to_s event.subject}_#{event.event_type}", locals: {event: event, context: "dropdown"} %>

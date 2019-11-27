@@ -7,6 +7,8 @@ class Event < ApplicationRecord
 
   scope :unreaded, -> {where readed: false}
 
+  after_create_commit { EventsBroadcastJob.perform_later self}
+
   def subject
     begin
       @subject ||= serialized_subject[:class_name].constantize.find serialized_subject[:id]

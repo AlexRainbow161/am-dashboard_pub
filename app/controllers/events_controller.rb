@@ -1,9 +1,21 @@
 class EventsController < ApplicationController
-  before_action :set_event, except: [:index]
+  before_action :set_event, except: [:index, :new]
   before_action :set_user, only: [:index]
-  def index; end
+  def index
+  end
   def show; end
-  def new; end
+  def new
+    if current_user.id == 1
+      Event.create!(
+               user_id: current_user.id,
+               from_user_id: 3,
+               serialized_subject: {class_name: "Job", id: 806},
+               readed: false,
+               comment: "Hello From ws",
+               event_type: 1
+      )
+    end
+  end
   def create; end
   def update
     @event.update(event_params)

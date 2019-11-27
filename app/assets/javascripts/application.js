@@ -21,5 +21,12 @@
 
 function remove_event_from_dropdown(eventId, unreadedEvents){
     $(`#event-${eventId}`).remove();
-    $('#event-badge')[0].innerText = unreadedEvents;
+    $eventBadge = $('#event-badge');
+    if (unreadedEvents < 1){
+        $eventBadge.addClass('d-none');
+    }
+    else{
+        $eventBadge[0].innerText = unreadedEvents;
+    }
+
 }
