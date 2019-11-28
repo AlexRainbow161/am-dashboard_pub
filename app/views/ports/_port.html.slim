@@ -6,4 +6,4 @@ div.port data-port="#{port.port_number}" data-used="#{port.used}" data-port-id="
   - else
     = image_tag 'eth_off.svg', style: 'height: 64px; width: 64px; padding: 0 8px 0 8px'
   div style="padding: 0 8px 0 8px"
-    p.border.border-dark.rounded-lg.text-center style="margin-bottom: 0.5rem" = port.short_description && port.short_description.length > 0 && port.used ? port.short_description : port.port_number
+    p.border.border-dark.rounded-lg.text-center style="margin-bottom: 0.5rem" = (port.short_description && (port.short_description.length > 0)) ? port.short_description : port.port_number

@@ -30,3 +30,9 @@ function remove_event_from_dropdown(eventId, unreadedEvents){
     }
 
 }
+$(document).on('turbolinks:load', ()=>{
+   $('body').on('click', '#audioPlay', ()=>{
+       $('#notifySound')[0].play();
+   });
+});
+

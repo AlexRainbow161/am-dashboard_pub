@@ -4,7 +4,6 @@
     <title>Автоматизация</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= action_cable_meta_tag %>
     <meta name="user-id" content="<%= current_user.id if current_user %>">
@@ -14,6 +13,8 @@
 
   <body>
   <% if logined? %>
+    <%= audio_tag("mario_coin_sound.mp3", id: "notifySound") %>
+    <button id="audioPlay" class="d-none"></button>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
       <%= link_to "Автоматизация", root_path, class: "navbar-brand" %>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,7 +27,7 @@
           <%= link_to("#", class: "nav-link text-white dropdown-toggle", id: "dropdownMenuLink", "data-toggle": "dropdown", "aria-haspopup": true, "aria-expanded": false) do %>
           <span>
             Сообщения
-              <span id="event-badge" class="badge badge-danger <%= 'd-none' if current_user.events.unreaded.count < 1 %>"><%= current_user.events.unreaded.count %></span>
+              <span id="event-badge" class="badge badge-danger <%= 'd-none' if current_user.events.unreaded.size < 1 %>"><%= current_user.events.unreaded.size %></span>
           </span>
           <% end %>
           <div style="max-height: 50vh; overflow-y: auto; min-width: 30em" class="dropdown-menu dropdown-menu-right event-menu" aria-labelledby="dropdownMenuLink">

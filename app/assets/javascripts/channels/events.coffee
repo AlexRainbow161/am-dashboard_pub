@@ -14,3 +14,4 @@ App.events = App.cable.subscriptions.create {channel: "EventsChannel", user_id: 
       $eventsContainer = $('.events-container');
       if $eventsContainer.length > 0
         $eventsContainer.prepend $(data['message']).removeClass('event-card').attr('data-context', 'index')
+      $('#audioPlay').trigger('click');

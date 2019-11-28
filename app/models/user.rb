@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  default_scope { includes(:jobs, :user_role) }
+  default_scope { includes(:jobs, :user_role, :events) }
   scope :admins_only, -> { where(role_id: 1) }
   scope :exclude_user, -> (user_id) { where.not(id: user_id) }
   scope :search_by_name, -> (name) {where "fullname like (?)", "%#{name}%"}
