@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  private :id=
   default_scope { includes(:jobs, :user_role, :events) }
   scope :admins_only, -> { where(role_id: 1) }
   scope :exclude_user, -> (user_id) { where.not(id: user_id) }
