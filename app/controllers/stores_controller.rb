@@ -2,7 +2,7 @@ class StoresController < ApplicationController
   before_action :set_store, only: [:show]
   before_action :query_params, only: [:index]
   def index
-    @pagy, @stores = pagy(Store.all.jobs_new_to_old)
+    @stores = Store.all.jobs_new_to_old
     @stores = @stores.by_name(params[:name]) if params[:name] && !params[:name].empty?
     @stores = @stores.by_region(params[:region]) if params[:region] && !params[:region].empty?
     @stores = @stores.by_status(params[:s_stat]) if params[:s_stat] && !params[:s_stat].empty?
@@ -13,6 +13,7 @@ class StoresController < ApplicationController
     if !params[:s_stat] || params[:s_stat].empty?
       @stores = @stores.where.not(s_stat: "Закрыт")
     end
+    @pagy, @stores = pagy(@stores)
   end
   def show; end
 
