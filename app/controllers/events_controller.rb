@@ -4,18 +4,7 @@ class EventsController < ApplicationController
   def index
   end
   def show; end
-  def new
-    if current_user.id == 1
-      Event.create!(
-               user_id: current_user.id,
-               from_user_id: 3,
-               serialized_subject: {class_name: "Job", id: 806},
-               readed: false,
-               comment: "Hello From ws",
-               event_type: 1
-      )
-    end
-  end
+  def new; end
   def create; end
   def update
     @event.update(event_params)
