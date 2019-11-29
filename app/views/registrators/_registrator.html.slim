@@ -4,7 +4,7 @@ div.border.rounded-lg.border-dark id="#{registrator.id}" style="width: max-conte
   p = "IP: " + registrator.ip_address
   div.btn-group
     = link_to "Web интерфейс", "http://#{registrator.ip_address}/", target: :_blank, class: 'btn btn-outline-primary border-dark btn-sm', role: 'button'
-    - if current_user.admin? || current_user.id = registrator.job.user.id
+    - if current_user.admin? || current_user.id == registrator.job.user.id
       = link_to "Удалить", job_registrator_path(registrator.job.id, registrator.id), :method => :delete, :remote => true, class: 'btn btn-outline-danger btn-sm btn-r border-dark ml-auto', role: 'button'
 
 
