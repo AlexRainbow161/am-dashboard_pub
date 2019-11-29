@@ -6,7 +6,7 @@ module SessionsHelper
     @current_user ||= User.find_by(id: session[:user_principal_id])
   end
   def log_out
-    session.delete(:user_id)
+    session.delete(:user_principal_id)
     @current_user = nil
   end
 
