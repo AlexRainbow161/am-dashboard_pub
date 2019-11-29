@@ -8,7 +8,7 @@ div.row
     div.tab-content id="myTabContent"
       div class="tab-pane fade show active" id="photos" role="tabpanel" aria-labelledby="photos-tab"
         div.card-columns id="photoCardColumns"
-          == render partial: 'photos/photo', collection: @job.photos
+          == render partial: 'photos/photo', collection: @job.photos, cached: true
       div class="tab-pane fade show" id="patch-panel" role="tabpanel" aria-labelledby="patch-panel-tab"
         - @job.patch_panels.all.each do |patch_panel|
           == render partial: 'patch_panels/patch_panel', locals: {"@job": @job, patch_panel: patch_panel}
