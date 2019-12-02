@@ -8,7 +8,6 @@ class EventsBroadcastJob < ApplicationJob
   def render_event(event)
     EventsController.render(
                         partial: "event_#{event.subject.class.to_s.downcase}_#{event.event_type}",
-                        locals: {event: event, context: "dropdown"}
-    )
+                        locals: {event: event, context: "dropdown"})
   end
 end

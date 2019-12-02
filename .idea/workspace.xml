@@ -425,7 +425,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="language.elixir.sdks.erlang" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -611,7 +611,7 @@
       <workItem from="1574168512525" duration="2249000" />
       <workItem from="1574236802840" duration="31643000" />
       <workItem from="1574403706428" duration="57788000" />
-      <workItem from="1574971914692" duration="6160000" />
+      <workItem from="1574971914692" duration="11947000" />
     </task>
     <servers />
   </component>

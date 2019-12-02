@@ -12,6 +12,10 @@ gem 'mysql2'
 # for dumping db rails like
 gem 'yaml_db'
 
+gem 'redis-rails'
+
+gem 'sidekiq'
+
 gem 'jquery-rails'
 
 gem 'pagy'

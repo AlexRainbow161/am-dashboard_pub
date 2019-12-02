@@ -9,6 +9,9 @@ class ApplicationController < ActionController::Base
   private
 
   def authentificate
-    redirect_to login_path unless logined?
+    unless logined?
+      session[:return_path] = request.url
+      redirect_to login_path
+    end
   end
 end
