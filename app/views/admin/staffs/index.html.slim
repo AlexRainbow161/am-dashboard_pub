@@ -3,7 +3,7 @@ div.form-group
     input.form-control type="text" placeholder="Поиск по имени" data="search-staff" oninput="search_staff(this.value)"
     div.input-group-append
       button.btn.btn-outline-secondary data-toggle="modal" data-target="#exampleModal" data-action="new" Добавить новый
-div.card-columns style="column-count: 4" data-target="staffs-wrapper"
+div.card-columns data-target="staffs-wrapper"
   == render partial: 'staff', collection: @staffs
 
 == render 'modal'

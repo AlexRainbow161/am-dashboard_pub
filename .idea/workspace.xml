@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b68124d4-853c-42c4-839a-edf54faea5fb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/assets/images/icon_letter.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/layouts/_letter_icon.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.generators" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.generators" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.rakeTasks" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" afterDir="false" />
@@ -31,6 +29,7 @@
       <change beforePath="$PROJECT_DIR$/app/assets/images/eth_off.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/images/eth_off.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/assets/images/eth_on.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/images/eth_on.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/assets/images/ethernet.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/images/ethernet.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/images/icon_letter.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/images/icon_letter.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/assets/images/not-available.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/images/not-available.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/assets/images/plug.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/images/plug.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/assets/javascripts/admin.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/admin.coffee" afterDir="false" />
@@ -183,6 +182,7 @@
       <change beforePath="$PROJECT_DIR$/app/views/jobs/new.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/jobs/new.html.slim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/jobs/return_to_work.js.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/jobs/return_to_work.js.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/jobs/show.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/jobs/show.html.slim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/_letter_icon.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_letter_icon.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/layouts/admin.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/admin.html.slim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/layouts/mailer.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/mailer.html.erb" afterDir="false" />
@@ -637,7 +637,7 @@
       <workItem from="1574236802840" duration="31643000" />
       <workItem from="1574403706428" duration="57788000" />
       <workItem from="1574971914692" duration="16291000" />
-      <workItem from="1575292849587" duration="36799000" />
+      <workItem from="1575292849587" duration="36963000" />
     </task>
     <servers />
   </component>
