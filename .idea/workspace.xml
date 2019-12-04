@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b68124d4-853c-42c4-839a-edf54faea5fb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/application-mailer.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/job_notify_mailer/notify_admin.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/job_notify_mailer/notify_user.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/supervise_mailer/supervised_photo.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/assets/images/icon_letter.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/layouts/_letter_icon.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.generators" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.generators" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.rakeTasks" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" afterDir="false" />
@@ -62,6 +60,7 @@
       <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/admin/ldap.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/admin/ldap.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/admin/staff.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/admin/staff.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/admin/users.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/admin/users.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application-mailer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application-mailer.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/bootstrap-grid.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/bootstrap-grid.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/bootstrap-grid.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/bootstrap-grid.css.map" afterDir="false" />
@@ -124,6 +123,7 @@
       <change beforePath="$PROJECT_DIR$/app/lib/sql_server_helper/sql_server_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/sql_server_helper/sql_server_helper.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/mailers/application_mailer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/mailers/application_mailer.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/mailers/job_notify_mailer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/mailers/job_notify_mailer.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/mailers/supervise_mailer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/mailers/supervise_mailer.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/application_record.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/application_record.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/concerns/.keep" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/concerns/.keep" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/event.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/event.rb" afterDir="false" />
@@ -168,8 +168,8 @@
       <change beforePath="$PROJECT_DIR$/app/views/events/_event_job_user.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/events/_event_job_user.html.slim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/events/index.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/events/index.html.slim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/events/update.js.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/events/update.js.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/job_notify_mailer/notify_admin.html.slim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/job_notify_mailer/notify_user.html.slim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/job_notify_mailer/notify_admin.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/job_notify_mailer/notify_admin.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/job_notify_mailer/notify_user.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/job_notify_mailer/notify_user.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/jobs/_add_item_button.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/jobs/_add_item_button.html.slim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/jobs/_form.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/jobs/_form.html.slim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/jobs/_form_admin.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/jobs/_form_admin.html.slim" afterDir="false" />
@@ -186,9 +186,7 @@
       <change beforePath="$PROJECT_DIR$/app/views/layouts/admin.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/admin.html.slim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/layouts/mailer.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/mailer.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/mailer.html.slim" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/layouts/mailer.text.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/mailer.text.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/mailer.text.slim" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/patch_panels/_form.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/patch_panels/_form.html.slim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/patch_panels/_modal.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/patch_panels/_modal.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/patch_panels/_patch_panel.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/patch_panels/_patch_panel.html.slim" afterDir="false" />
@@ -230,6 +228,7 @@
       <change beforePath="$PROJECT_DIR$/app/views/stores/index.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/stores/index.html.slim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/stores/index.js.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/stores/index.js.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/stores/show.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/stores/show.html.slim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/supervise_mailer/supervised_photo.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/supervise_mailer/supervised_photo.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/user/index.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/user/index.html.slim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/user/show.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/user/show.html.slim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/bundle" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bundle" afterDir="false" />
@@ -288,6 +287,8 @@
       <change beforePath="$PROJECT_DIR$/db/migrate/20191121094400_add_comment_to_event.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20191121094400_add_comment_to_event.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/migrate/20191123131535_add_required_to_staff.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20191123131535_add_required_to_staff.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/migrate/20191125080132_add_report_to_staff.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20191125080132_add_report_to_staff.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20191202102904_add_supervisor_to_user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20191202102904_add_supervisor_to_user.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20191202103543_add_supervised_to_staff.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20191202103543_add_supervised_to_staff.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/assets/.keep" beforeDir="false" afterPath="$PROJECT_DIR$/lib/assets/.keep" afterDir="false" />
@@ -345,6 +346,8 @@
       <change beforePath="$PROJECT_DIR$/test/mailers/.keep" beforeDir="false" afterPath="$PROJECT_DIR$/test/mailers/.keep" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/mailers/job_notify_mailer_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/mailers/job_notify_mailer_test.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/mailers/previews/job_notify_mailer_preview.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/mailers/previews/job_notify_mailer_preview.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/mailers/previews/supervise_mailer_preview.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/mailers/previews/supervise_mailer_preview.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/mailers/supervise_mailer_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/mailers/supervise_mailer_test.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/models/.keep" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/.keep" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/models/event_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/event_test.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/models/job_info_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/job_info_test.rb" afterDir="false" />
@@ -437,7 +440,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.16.3" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/assets/stylesheets" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/views/layouts" />
     <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.stylelint" value="project" />
@@ -447,7 +450,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="Settings.JavaScript.Bower" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -458,11 +461,11 @@
       <recent name="C:\Users\Aleksandr\code\am-dashboard\app\views\admin\admin" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Aleksandr\code\am-dashboard\app\views\layouts" />
+      <recent name="C:\Users\Aleksandr\code\am-dashboard\app\assets\images" />
       <recent name="C:\Users\Aleksandr\code\am-dashboard\app\assets\stylesheets" />
       <recent name="C:\Users\Aleksandr\code\am-dashboard\public\sounds" />
       <recent name="C:\Users\Aleksandr\code\am-dashboard\app\assets\sounds" />
-      <recent name="C:\Users\Aleksandr\code\am-dashboard\app\assets\images" />
-      <recent name="C:\Users\Aleksandr\code\am-dashboard\app\assets\javascripts" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -634,7 +637,7 @@
       <workItem from="1574236802840" duration="31643000" />
       <workItem from="1574403706428" duration="57788000" />
       <workItem from="1574971914692" duration="16291000" />
-      <workItem from="1575292849587" duration="30653000" />
+      <workItem from="1575292849587" duration="36799000" />
     </task>
     <servers />
   </component>
