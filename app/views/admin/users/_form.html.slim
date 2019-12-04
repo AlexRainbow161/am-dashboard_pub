@@ -16,5 +16,8 @@
   div.form-group
     = f.label :Роль
     = f.select :role_id, options_for_select([["Пользователь", 2],["Администратор", 1]], (@user.role_id unless @user.nil?)), {}, {class: "form-control"}
+  div.form-check
+    = f.check_box :supervisor, class: 'form-check-input', id: "supervisorCheck"
+    = f.label :Supervisor, for: "supervisorCheck"
   div.form-group
     = f.submit value: "Сохранить", id:"submit", class: "btn btn-outline-primary"

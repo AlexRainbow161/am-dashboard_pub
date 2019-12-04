@@ -7,6 +7,7 @@ class Staff < ApplicationRecord
   scope :reports, -> {where staff_type: 3}
   scope :name_search, ->(name) {where "name like (?)", "%#{name}%"}
   scope :required, -> {where required: true}
+  scope :supervised, -> {where supervised: true}
   has_one :equpments, class_name: 'Staff', foreign_key: :zone_id
   has_one :report, class_name: "Staff", foreign_key: :report_id
   belongs_to :zone, class_name: 'Staff', optional: true

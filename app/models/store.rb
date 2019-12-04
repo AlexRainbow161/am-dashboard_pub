@@ -22,4 +22,7 @@ class Store < ApplicationRecord
   def rozn
     self.email.split('@').first if self.email
   end
+  def pure_name
+    name.sub("м-н", "").strip
+  end
 end

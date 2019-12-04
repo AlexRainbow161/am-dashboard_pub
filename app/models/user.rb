@@ -4,6 +4,7 @@ class User < ApplicationRecord
   scope :admins_only, -> { where(role_id: 1) }
   scope :exclude_user, -> (user_id) { where.not(id: user_id) }
   scope :search_by_name, -> (name) {where "fullname like (?)", "%#{name}%"}
+  scope :supervisers, -> {where supervisor: true}
   belongs_to :user_role, foreign_key: :role_id
   has_many :jobs
   has_many :user_default_queries

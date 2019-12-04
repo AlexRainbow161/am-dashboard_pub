@@ -17,7 +17,7 @@ class Job < ApplicationRecord
   validate :check_past
   validate :check_duplicate
   validate :check_required_photos
-  before_save
+  after_save :send_supervised_photos, if: :on_supervise
   #before_save :create_in_sn
 
   def self.to_csv
@@ -75,5 +75,16 @@ class Job < ApplicationRecord
         end
       end
     end
+  end
+  def send_supervised_photos
+    s_photos = photos.includes(:eq).where(staffs: {supervised: true})
+    photos_list = []
+    s_photos.each do |photo|
+      photos_list << photo
+    end
+    SuperviseMailer.with(photos: photos_list, store: store.name).supervised_photo.deliver_later
+  end
+  def on_supervise
+    status.id == 5
   end
 end

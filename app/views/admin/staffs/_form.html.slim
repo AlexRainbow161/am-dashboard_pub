@@ -11,7 +11,10 @@ div
       = f.select :zone_id, options_for_select(select_zones, (@staff.zone_id if @staff.zone_id)), {}, {class: 'form-control', id: 'zone'}
     div.form-group.form-check id="formCheckReqOpt" style="#{'display: none;' if @staff.staff_type == 'Зона' || @staff.staff_type == 'Видеорегистратор'}"
       = f.check_box :required, class: "form-check-input", id: "reqCheck"
-      = f.label "Обязательный?", class: "form-check-label", for: "reqCheck"
+      = f.label "Обязательный", class: "form-check-label", for: "reqCheck"
+    div.form-check id="supervised" style="#{'display: none;' if @staff.staff_type == 'Зона' || @staff.staff_type == 'Видеорегистратор'}"
+      = f.check_box :supervised, class: 'form-check-input', id: "supervisedCheck"
+      = f.label "Наблидаемый", for: "supervisedCheck"
     div.form-group
       = f.submit value: "Сохранить", class: "btn btn-outline-primary", data: {disable_with: "Сохранение"}
 
@@ -20,8 +23,11 @@ javascript:
       if(e.target.selectedOptions[0].value === 'Оборудование' || e.target.selectedOptions[0].value === 'Отчет'){
           $('#zone_optional').css('display', 'block');
           $('#formCheckReqOpt').css('display', 'block');
+          $('#supervised').css('display', 'block');
       }else{
           $('#zone_optional').css('display', 'none');
+          $('#formCheckReqOpt').css('display', 'none');
+          $('#supervised').css('display', 'none');
           $('#zone').val('nil');
       }
   });

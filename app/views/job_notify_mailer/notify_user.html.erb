@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="card">
+    <div class="card-body text-center">
+      <h5 class="text-center"><strong>Изменение работы</strong></h5>
+      <hr>
+      <p class="text-center">
+        <strong><%= @who.name %></strong></p>
+      <p class="text-center">
+        изменил вашу работу от <%= human_date @job.start_date %> в магазине:
+      </p>
+      <p class="text-center">
+        <%= link_to @job.store.pure_name, store_url(@job.store) %>
+      </p>
+      <p class="text-center"><strong>Новый статус:&nbsp;</strong> <%= @job.status.name %></p>
+      <hr>
+      <%= link_to "Просмотреть", @url, class: "btn btn-primary mx-auto" %>
+    </div>
+  </div>
+</div>

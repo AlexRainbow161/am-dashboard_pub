@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b68124d4-853c-42c4-839a-edf54faea5fb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/application-mailer.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/job_notify_mailer/notify_admin.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/job_notify_mailer/notify_user.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/supervise_mailer/supervised_photo.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.generators" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.generators" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.rakeTasks" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" afterDir="false" />
@@ -164,8 +168,8 @@
       <change beforePath="$PROJECT_DIR$/app/views/events/_event_job_user.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/events/_event_job_user.html.slim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/events/index.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/events/index.html.slim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/events/update.js.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/events/update.js.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/job_notify_mailer/notify_admin.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/job_notify_mailer/notify_admin.html.slim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/job_notify_mailer/notify_user.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/job_notify_mailer/notify_user.html.slim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/job_notify_mailer/notify_admin.html.slim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/job_notify_mailer/notify_user.html.slim" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/jobs/_add_item_button.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/jobs/_add_item_button.html.slim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/jobs/_form.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/jobs/_form.html.slim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/jobs/_form_admin.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/jobs/_form_admin.html.slim" afterDir="false" />
@@ -182,9 +186,9 @@
       <change beforePath="$PROJECT_DIR$/app/views/layouts/admin.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/admin.html.slim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/layouts/mailer.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/mailer.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/mailer.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/mailer.html.slim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/mailer.html.slim" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/layouts/mailer.text.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/mailer.text.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/mailer.text.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/mailer.text.slim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/mailer.text.slim" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/patch_panels/_form.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/patch_panels/_form.html.slim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/patch_panels/_modal.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/patch_panels/_modal.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/patch_panels/_patch_panel.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/patch_panels/_patch_panel.html.slim" afterDir="false" />
@@ -407,6 +411,17 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JsBowerSettings">
+    <node-interpreter value="project" />
+    <bower-package value="" />
+    <bower.json value="" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -421,26 +436,33 @@
     <property name="DatabaseDriversLRU" value="sqlite&#10;mysql" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/sounds" />
+    <property name="javascript.nodejs.core.library.configured.version" value="10.16.3" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/assets/stylesheets" />
+    <property name="node.js.detected.package.stylelint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.stylelint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.stylelint" value="" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="language.elixir.sdks.erlang" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript.Bower" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Aleksandr\code\am-dashboard\public\sounds" />
-      <recent name="C:\Users\Aleksandr\code\am-dashboard\app\assets\sounds" />
-      <recent name="C:\Users\Aleksandr\code\am-dashboard\app\assets\images" />
-      <recent name="C:\Users\Aleksandr\code\am-dashboard\app\assets\stylesheets" />
-      <recent name="C:\Users\Aleksandr\code\am-dashboard\app\assets\javascripts" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Aleksandr\code\am-dashboard\app\assets\images" />
       <recent name="C:\Users\Aleksandr\code\am-dashboard\app\assets\javascripts" />
       <recent name="C:\Users\Aleksandr\code\am-dashboard\app\views\ports" />
       <recent name="C:\Users\Aleksandr\code\am-dashboard\app\views\admin\users" />
       <recent name="C:\Users\Aleksandr\code\am-dashboard\app\views\admin\admin" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Aleksandr\code\am-dashboard\app\assets\stylesheets" />
+      <recent name="C:\Users\Aleksandr\code\am-dashboard\public\sounds" />
+      <recent name="C:\Users\Aleksandr\code\am-dashboard\app\assets\sounds" />
+      <recent name="C:\Users\Aleksandr\code\am-dashboard\app\assets\images" />
+      <recent name="C:\Users\Aleksandr\code\am-dashboard\app\assets\javascripts" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -611,7 +633,8 @@
       <workItem from="1574168512525" duration="2249000" />
       <workItem from="1574236802840" duration="31643000" />
       <workItem from="1574403706428" duration="57788000" />
-      <workItem from="1574971914692" duration="11947000" />
+      <workItem from="1574971914692" duration="16291000" />
+      <workItem from="1575292849587" duration="30653000" />
     </task>
     <servers />
   </component>

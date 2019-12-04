@@ -41,7 +41,7 @@ module Admin
 
     private
     def user_params
-      params.require(:user).permit(:username, :email, :fullname, :role_id)
+      params.require(:user).permit(:username, :email, :fullname, :role_id, :supervisor)
     end
     def set_user
       @user = User.find(params[:id])
