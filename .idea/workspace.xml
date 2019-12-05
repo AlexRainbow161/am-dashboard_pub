@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b68124d4-853c-42c4-839a-edf54faea5fb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/views/photos/check.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.generators" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.generators" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.rakeTasks" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" afterDir="false" />
@@ -199,6 +198,7 @@
       <change beforePath="$PROJECT_DIR$/app/views/photos/_form.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/photos/_form.html.slim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/photos/_photo.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/photos/_photo.html.slim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/photos/_show_partial.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/photos/_show_partial.html.slim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/photos/check.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/photos/check.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/photos/create.js.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/photos/create.js.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/photos/destroy.js.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/photos/destroy.js.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/photos/edit.html.slim" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/photos/edit.html.slim" afterDir="false" />
@@ -290,6 +290,7 @@
       <change beforePath="$PROJECT_DIR$/db/migrate/20191125080132_add_report_to_staff.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20191125080132_add_report_to_staff.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/migrate/20191202102904_add_supervisor_to_user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20191202102904_add_supervisor_to_user.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/migrate/20191202103543_add_supervised_to_staff.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20191202103543_add_supervised_to_staff.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20191205062101_add_superviser_check_to_photo.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20191205062101_add_superviser_check_to_photo.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/assets/.keep" beforeDir="false" afterPath="$PROJECT_DIR$/lib/assets/.keep" afterDir="false" />
@@ -638,7 +639,7 @@
       <workItem from="1574236802840" duration="31643000" />
       <workItem from="1574403706428" duration="57788000" />
       <workItem from="1574971914692" duration="16291000" />
-      <workItem from="1575292849587" duration="49974000" />
+      <workItem from="1575292849587" duration="50283000" />
     </task>
     <servers />
   </component>

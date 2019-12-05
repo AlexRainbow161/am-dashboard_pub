@@ -77,7 +77,7 @@ class Job < ApplicationRecord
     end
   end
   def send_supervised_photos
-    s_photos = photos.includes(:eq).where(staffs: {supervised: true})
+    s_photos = photos.includes(:eq).where(staffs: {supervised: true}).where.not(checked: true)
     photos_list = []
     s_photos.each do |photo|
       photos_list << photo
