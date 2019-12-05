@@ -6,7 +6,7 @@ Rails.application.configure do
   # since you don't have to restart the web server when you make code changes.
   config.cache_classes = false
 
-  config.action_controller.default_url_options = {host: "localhost:3000"}
+  config.action_controller.default_url_options = {host: ENV['am_dash_host']}
   # Do not eager load code on boot.
   config.eager_load = false
 
@@ -44,7 +44,7 @@ Rails.application.configure do
       password:             'jkr5NDPo693RT',
       authentication:       'login',
       enable_starttls_auto: false}
-  config.action_mailer.default_url_options = { host: "am-dash.gloria-jeans.ru" }
+  config.action_mailer.default_url_options = { host: ENV['am_dash_host'] }
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log

@@ -32,3 +32,6 @@
 
 # Ignore idea config
 /.idea
+
+# Ignore application configuration
+/config/application.yml

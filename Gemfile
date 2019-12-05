@@ -28,6 +28,10 @@ gem 'net-ldap'
 
 gem 'bootstrap-email'
 
+gem "font-awesome-rails"
+
+gem "figaro"
+
 gem 'mini_magick'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'

@@ -1,9 +1,10 @@
+p = url_for(action: 'check', controller: 'photos', only_path: false, id: @photo.id, photo: {checked: true})
 div.card.m-auto style="width: max-content"
   div.card-header
     span =' @photo.zone.name
-    span =' @photo.eq.name
-    span =' @photo.comment
-
+    span =' @photo.eq.name.downcase
+    span =' @photo.comment.downcase
+    = fa_icon "check", style: "color: green", class: "ml-auto"
   div.card-body.d-flex
     = image_tag url_for(@photo.image.variant(resize: '768x768', rotate: '0', auto_orient: true)), class: "card-img-middle m-auto"
   div.card-footer

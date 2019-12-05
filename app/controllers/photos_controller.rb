@@ -1,6 +1,7 @@
 class PhotosController < ApplicationController
+  skip_before_action :authentificate, only: [:check]
   before_action :set_photo, except: [:new, :create]
-  before_action :set_job
+  before_action :set_job, except: [:check]
 
   def show;
     respond_to do |format|
@@ -54,14 +55,30 @@ class PhotosController < ApplicationController
     end
   end
 
+  def check
+    if @photo.update(check_params)
+      flash.now[:success] = "Успешно обновлено"
+    else
+      flash.now[:danger] = "Ошибка обновления"
+    end
+  end
+
   private
     def set_photo
-      @photo = Photo.find(params[:id])
+      begin
+        @photo = Photo.find(params[:id])
+      rescue
+        render_404
+      end
+
     end
     def set_job
       @job = Job.find(params[:job_id])
     end
     def photo_params
       params.require(:photo).permit(:job_id, :image, :comment, :zone_id, :eq_id)
+    end
+    def check_params
+      params.require(:photo).permit(:checked)
     end
 end
