@@ -99,7 +99,7 @@ ActiveRecord::Schema.define(version: 2019_12_05_062101) do
     t.boolean "empty", default: false
   end
 
-  create_table "registrators", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "registrators", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
     t.integer "job_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
