@@ -26,4 +26,7 @@
           ='"С комментарием:"
           span.font-italic = event.comment
 - else
-  p.text-center Событие ссылается на удаленный элемент
+  p.text-center class="event-card-nil-#{event.id}"
+    'Событие ссылается на удаленный элемент
+    = link_to user_event_path(event.user, event), method: :delete, remote: true, class: "close", "aria-label": "Close" do
+      span aria-hidden="true" &times;

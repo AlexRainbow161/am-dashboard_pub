@@ -12,7 +12,15 @@ class EventsController < ApplicationController
       format.js
     end
   end
-  def destroy; end
+  def destroy
+    if @event.subject.id.nil?
+      if @event.destroy
+        respond_to do |format|
+          format.js
+        end
+      end
+    end
+  end
 
   private
 

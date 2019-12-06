@@ -1,4 +1,4 @@
-App.events = App.cable.subscriptions.create {channel: "EventsChannel", user_id: $("meta[name=user-id]").attr('content')},
+App.events = App.cable.subscriptions.create "EventsChannel",
   connected: ->
     # Called when the subscription is ready for use on the server
 

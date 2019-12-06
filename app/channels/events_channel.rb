@@ -1,7 +1,6 @@
 class EventsChannel < ApplicationCable::Channel
   def subscribed
-    stream_from "events_#{params[:user_id]}"
-
+    stream_for current_user
   end
 
   def unsubscribed

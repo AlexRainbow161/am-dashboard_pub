@@ -2,7 +2,7 @@ class EventsBroadcastJob < ApplicationJob
   queue_as :default
 
   def perform(event)
-    ActionCable.server.broadcast "events_#{event.user.id}", {message: render_event(event), event_count: event.user.events.unreaded.count}
+    EventsChannel.broadcast_to event.user,{message: render_event(event), event_count: event.user.events.unreaded.count}
   end
   private
   def render_event(event)
