@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b68124d4-853c-42c4-839a-edf54faea5fb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/config/application.example.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.generators" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.generators" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.rakeTasks" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" afterDir="false" />
@@ -18,7 +17,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.ruby-version" beforeDir="false" afterPath="$PROJECT_DIR$/.ruby-version" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.solargraph.yml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
@@ -242,6 +240,7 @@
       <change beforePath="$PROJECT_DIR$/bin/update" beforeDir="false" afterPath="$PROJECT_DIR$/bin/update" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/yarn" beforeDir="false" afterPath="$PROJECT_DIR$/bin/yarn" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.ru" beforeDir="false" afterPath="$PROJECT_DIR$/config.ru" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/application.example.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/application.example.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/application.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/application.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/boot.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/boot.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/cable.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/cable.yml" afterDir="false" />
@@ -310,7 +309,6 @@
       <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sql_queries/sand_query.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql_queries/sand_query.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/.keep" beforeDir="false" afterPath="$PROJECT_DIR$/storage/.keep" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stores.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/application_system_test_case.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/application_system_test_case.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/controllers/.keep" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/.keep" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/controllers/admin/ldap_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/admin/ldap_controller_test.rb" afterDir="false" />
@@ -369,8 +367,6 @@
       <change beforePath="$PROJECT_DIR$/test/models/user_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/user_test.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/system/.keep" beforeDir="false" afterPath="$PROJECT_DIR$/test/system/.keep" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/test_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_helper.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_oop.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_tds.rb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/.keep" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/.keep" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/.keep" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/.keep" afterDir="false" />
     </list>
@@ -644,7 +640,7 @@
       <workItem from="1574236802840" duration="31643000" />
       <workItem from="1574403706428" duration="57788000" />
       <workItem from="1574971914692" duration="16291000" />
-      <workItem from="1575292849587" duration="61829000" />
+      <workItem from="1575292849587" duration="62514000" />
     </task>
     <servers />
   </component>
