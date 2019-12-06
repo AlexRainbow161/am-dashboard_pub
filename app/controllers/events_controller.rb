@@ -36,7 +36,6 @@ class EventsController < ApplicationController
     else
       @user = current_user
     end
-
   end
 end
 

@@ -31,7 +31,8 @@
 /config/master.key
 
 # Ignore idea config
-/.idea
+.idea/
+
 
 # Ignore application configuration
 /config/application.yml
