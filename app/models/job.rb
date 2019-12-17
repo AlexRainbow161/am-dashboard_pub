@@ -77,9 +77,15 @@ class Job < ApplicationRecord
     end
   end
   def send_supervised_photos
-    s_photos = photos.includes(:eq).where(staffs: {supervised: true}).where.not(checked: true)
+    s_photos = photos.includes(:eq).where(staffs: {supervised: true}).where('photos.checked IS NULL OR photos.checked != TRUE')
     photos_list = []
     s_photos.each do |photo|
+      puts "*************************"
+      puts "*************************"
+      puts photo
+      puts "*************************"
+      puts "*************************"
+      puts "*************************"
       photos_list << photo
     end
     SuperviseMailer.with(photos: photos_list, store: store.name).supervised_photo.deliver_later

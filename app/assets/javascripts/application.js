@@ -33,9 +33,19 @@ function remove_event_from_dropdown(eventId, unreadedEvents){
     }
 
 }
+
+let lastRequest;
+
+function storeLastRequest(request){
+    lastRequest = request;
+}
+
+function getLastRequest(){
+    return lastRequest;
+}
+
 $(document).on('turbolinks:load', ()=>{
    $('body').on('click', '#audioPlay', ()=>{
        $('#notifySound')[0].play();
    });
 });
-
