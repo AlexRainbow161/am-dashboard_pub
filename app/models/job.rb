@@ -21,11 +21,11 @@ class Job < ApplicationRecord
   #before_save :create_in_sn
 
   def self.to_csv
-    atrributes = %w{Тип Статус Магазин Инженер Дата}
+    atrributes = %w{Тип Статус Магазин Инженер Дата_начала Дата_окончания}
     CSV.generate(headers: true, col_sep: ";", encoding: "cp1251") do |csv|
       csv << atrributes
       all.each do |job|
-        csv << [job.job_type.name, job.status.name, job.store.name, job.user.fullname, (job.end_date ? job.end_date : job.start_date).strftime("%d.%m.%Y")]
+        csv << [job.job_type.name, job.status.name, job.store.name, job.user.fullname, (job.start_date ? job.start_date.strftime("%d.%m.%Y") : ""), (job.end_date ? job.end_date.strftime("%d.%m.%Y") : "")]
       end
     end
   end
