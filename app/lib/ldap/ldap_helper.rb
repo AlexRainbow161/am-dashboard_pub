@@ -7,8 +7,8 @@ module Ldap
         ldap = Net::LDAP.new
         ldap.host = "10.61.0.10"
         ldap.port = 389
-        ldap.auth "gj\\#{username}", password
-        result = ldap.bind_as(base: "dc=gloria,dc=aaanet,dc=ru",
+        ldap.auth "my\\#{username}", password
+        result = ldap.bind_as(base: "dc=my,dc=company,dc=ru",
                               filter: "(sAMAccountName=#{username})",
                               password: password)
         if result
@@ -25,10 +25,10 @@ module Ldap
         ldap ||= Net::LDAP.new
         ldap.host = "10.61.0.10"
         ldap.port = 389
-        ldap.auth "gj\\soti", "1@5erCUF@l3Z"
+        ldap.auth "my\\example", "example_password"
         if ldap.bind
           filter = Net::LDAP::Filter.eq('sAMAccountName', "*#{username}*")
-          tree = "dc=gloria,dc=aaanet,dc=ru"
+          tree = "dc=my,dc=company,dc=ru"
           attrs  = ['mail', 'displayName', 'sAMAccountName']
           entrys = ldap.search(base: tree, filter: filter, attributes: attrs)
         else

@@ -14,7 +14,7 @@ module ServiceNowApi
       end
       private
       @@headers = {
-          "Authorization": "Basic Z2pfcmVzdDpCV0liV1BNOQ==",
+          "Authorization": "Basic blablabla==",
           "Content-Type": "Application/json",
           "Accept": "Application/json"
       }
@@ -27,7 +27,7 @@ module ServiceNowApi
             user: user_id,
             assig_group: "f545924adbd3fe00ab0cf3361d9619da"
         }.to_json
-        uri = URI.parse("https://gjtest.service-now.com/api/gjoao/gj_post_ppr")
+        uri = URI.parse("https://example.com/api/gjoao/gj_post_ppr")
         https = Net::HTTP.new(uri.host, uri.port)
         https.use_ssl = true
         req = Net::HTTP::Post.new(uri.path, @@headers)
@@ -40,7 +40,7 @@ module ServiceNowApi
         data = {
             user_name: entity_name
         }.to_json
-        uri = URI.parse("https://gjtest.service-now.com/api/gjoao/gj_getusid")
+        uri = URI.parse("https://https://example.com/api/gjoao/gj_getusid")
         https = Net::HTTP.new(uri.host, uri.port)
         https.use_ssl = true
         req = Net::HTTP::Post.new(uri.path, @@headers)

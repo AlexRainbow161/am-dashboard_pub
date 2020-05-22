@@ -38,10 +38,10 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-      address:              'smtp.gloria-jeans.ru',
+      address:              'smtp.example.ru',
       port:                 25,
-      user_name:            'clientsupport@gloria-jeans.ru',
-      password:             'jkr5NDPo693RT',
+      user_name:            'example@example.ru',
+      password:             'example_password',
       authentication:       'login',
       enable_starttls_auto: false}
   config.action_mailer.default_url_options = { host: ENV['am_dash_host'] }
