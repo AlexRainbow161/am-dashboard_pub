@@ -2,7 +2,7 @@
   "name": "am-dashboard",
   "private": true,
   "dependencies": {
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "bootstrap": "^4.3.1",
     "cropper": "~4.0.0"
   }
