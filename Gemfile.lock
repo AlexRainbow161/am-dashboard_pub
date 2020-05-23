@@ -124,7 +124,7 @@ GEM
     mysql2 (0.5.2)
     net-ldap (0.16.1)
     nio4r (2.5.1)
-    nokogiri (1.10.4)
+    nokogiri (1.10.9)
       mini_portile2 (~> 2.4.0)
     pagy (3.5.1)
     premailer (1.11.1)
