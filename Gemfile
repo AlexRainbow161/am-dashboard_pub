@@ -6,7 +6,7 @@ gem 'rails', '~> 5.2.3'
 # # Use tinyTDS for connect an MS-SQL server
 gem 'tiny_tds'
 # Use Puma as the app server
-gem 'puma', '~> 3.11'
+gem 'puma', '~> 4.3'
 gem 'sqlite3'
 gem 'mysql2'
 # for dumping db rails like
